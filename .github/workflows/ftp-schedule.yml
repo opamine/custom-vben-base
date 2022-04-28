@@ -52,5 +52,5 @@ jobs:
           METHOD: sftp
           PORT: ${{ secrets.FTP_PORT }}
           LOCAL_DIR: dist
-          REMOTE_DIR: /srv/www/vben-admin
+          REMOTE_DIR: /srv/www/vvt-base
           ARGS: --delete --verbose --parallel=80
