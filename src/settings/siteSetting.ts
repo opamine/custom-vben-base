@@ -1,7 +1,7 @@
 // github repo url
-export const GITHUB_URL = 'https://github.com/anncwb/vue-vben-admin';
+export const GITHUB_URL = 'https://github.com/opamine/vvt-base';
 
-// vue-vben-admin-next-doc
+// vvt-base-next-doc
 export const DOC_URL = 'https://vvbin.cn/doc-next/';
 
 // site url

@@ -150,11 +150,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opamine/vue-vben-admin.git"
+    "url": "git+https://github.com/opamine/vvt-base.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/opamine/vue-vben-admin/issues"
+    "url": "https://github.com/opamine/vvt-base/issues"
   },
   "engines": {
     "node": "^12 || >=14"
