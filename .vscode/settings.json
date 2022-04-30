@@ -1,3 +1,4 @@
 {
-  "i18n-ally.localesPaths": ["src/locales", "src/locales/lang", "public/resource/tinymce/langs"]
+  "i18n-ally.localesPaths": ["src/locales/lang"],
+  "cSpell.words": ["antd"]
 }
