@@ -1,4 +1,3 @@
 {
-  "i18n-ally.localesPaths": ["src/locales/lang"],
-  "cSpell.words": ["antd", "commitlint", "iconify", "vite"]
+  "i18n-ally.localesPaths": ["src/locales/lang"]
 }
