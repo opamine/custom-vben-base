@@ -85,7 +85,7 @@
           font-size: 32px;
           transform: rotate(45deg);
           box-sizing: border-box;
-          animation: antRotate 1.2s infinite linear;
+          animation: ant-rotate 1.2s infinite linear;
         }
 
         .dot i {
@@ -95,9 +95,9 @@
           height: 17px;
           background-color: #0065cc;
           border-radius: 100%;
-          opacity: 30%;
+          opacity: 0.3;
           transform: scale(0.75);
-          animation: antSpinMove 1s infinite linear alternate;
+          animation: ant-spin-move 1s infinite linear alternate;
           transform-origin: 50% 50%;
         }
 
@@ -123,24 +123,14 @@
           left: 0;
           animation-delay: 1.2s;
         }
-        @keyframes antRotate {
+        @keyframes ant-rotate {
           to {
             transform: rotate(405deg);
           }
         }
-        @keyframes antRotate {
+        @keyframes ant-spin-move {
           to {
-            transform: rotate(405deg);
-          }
-        }
-        @keyframes antSpinMove {
-          to {
-            opacity: 100%;
-          }
-        }
-        @keyframes antSpinMove {
-          to {
-            opacity: 100%;
+            opacity: 1;
           }
         }
       </style>
