@@ -334,7 +334,7 @@ export default defineComponent({
             def={unref(getShowHeader)}
           />
           <SwitchItem
-            title="Logo"
+            title='Logo'
             event={HandlerEnum.SHOW_LOGO}
             def={unref(getShowLogo)}
             disabled={unref(getIsMixSidebar)}
@@ -401,10 +401,10 @@ export default defineComponent({
         {...attrs}
         title={t('layout.setting.drawerTitle')}
         width={330}
-        class="setting-drawer"
+        class='setting-drawer'
       >
         {unref(getShowDarkModeToggle) && <Divider>{() => t('layout.setting.darkMode')}</Divider>}
-        {unref(getShowDarkModeToggle) && <AppDarkModeToggle class="mx-auto" />}
+        {unref(getShowDarkModeToggle) && <AppDarkModeToggle class='mx-auto' />}
         <Divider>{() => t('layout.setting.navMode')}</Divider>
         {renderSidebar()}
         <Divider>{() => t('layout.setting.sysTheme')}</Divider>

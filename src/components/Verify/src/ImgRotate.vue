@@ -125,7 +125,7 @@
         const time = (endTime - startTime) / 1000;
 
         return (
-          <div class="ir-dv">
+          <div class='ir-dv'>
             <div class={`ir-dv-img__wrap`} style={unref(getImgWrapStyleRef)}>
               <img
                 src={src}
@@ -136,7 +136,7 @@
                 onClick={() => {
                   resume();
                 }}
-                alt="verify"
+                alt='verify'
               />
               {state.showTip && (
                 <span class={[`ir-dv-img__tip`, state.isPassing ? 'success' : 'error']}>

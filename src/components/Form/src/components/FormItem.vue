@@ -298,7 +298,7 @@
         const { label, helpMessage, helpComponentProps, subLabel } = props.schema;
         const renderLabel = subLabel ? (
           <span>
-            {label} <span class="text-secondary">{subLabel}</span>
+            {label} <span class='text-secondary'>{subLabel}</span>
           </span>
         ) : (
           label
@@ -312,7 +312,7 @@
         return (
           <span>
             {renderLabel}
-            <BasicHelp placement="top" class="mx-1" text={getHelpMessage} {...helpComponentProps} />
+            <BasicHelp placement='top' class='mx-1' text={getHelpMessage} {...helpComponentProps} />
           </span>
         );
       }
@@ -351,9 +351,9 @@
               labelCol={labelCol}
               wrapperCol={wrapperCol}
             >
-              <div style="display:flex">
-                <div style="flex:1;">{getContent()}</div>
-                {showSuffix && <span class="suffix">{getSuffix}</span>}
+              <div style='display:flex'>
+                <div style='flex:1;'>{getContent()}</div>
+                {showSuffix && <span class='suffix'>{getSuffix}</span>}
               </div>
             </Form.Item>
           );

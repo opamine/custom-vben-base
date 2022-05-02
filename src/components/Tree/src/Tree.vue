@@ -426,14 +426,14 @@
                 {extendSlots(slots)}
               </TreeHeader>
             )}
-            <Spin spinning={unref(props.loading)} tip="加载中...">
+            <Spin spinning={unref(props.loading)} tip='加载中...'>
               <ScrollContainer style={scrollStyle} v-show={!unref(getNotFound)}>
                 <Tree {...unref(getBindValues)} showIcon={false} treeData={treeData.value} />
               </ScrollContainer>
               <Empty
                 v-show={unref(getNotFound)}
                 image={Empty.PRESENTED_IMAGE_SIMPLE}
-                class="!mt-4"
+                class='!mt-4'
               />
             </Spin>
           </div>

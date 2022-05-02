@@ -118,7 +118,7 @@
             {{
               extra: () =>
                 btnText && (
-                  <Button type="primary" onClick={handler}>
+                  <Button type='primary' onClick={handler}>
                     {() => btnText}
                   </Button>
                 ),

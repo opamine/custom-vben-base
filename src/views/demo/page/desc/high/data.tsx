@@ -18,7 +18,7 @@ export const refundTimeTableSchema: BasicColumn[] = [
     width: 150,
     dataIndex: 't3',
     customRender: ({ record }) => {
-      return <Badge status="success" text={record.t3} />;
+      return <Badge status='success' text={record.t3} />;
     },
   },
   {

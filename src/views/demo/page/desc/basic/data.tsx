@@ -66,7 +66,7 @@ export const refundTableSchema: BasicColumn[] = [
     dataIndex: 't1',
     customRender: ({ record }) => {
       return (
-        <Button type="link" size="small">
+        <Button type='link' size='small'>
           {() => record.t1}
         </Button>
       );
@@ -114,7 +114,7 @@ export const refundTimeTableSchema: BasicColumn[] = [
     width: 150,
     dataIndex: 't3',
     customRender: ({ record }) => {
-      return <Badge status="success" text={record.t3} />;
+      return <Badge status='success' text={record.t3} />;
     },
   },
   {

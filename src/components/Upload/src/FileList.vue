@@ -21,7 +21,7 @@
         const { columns, actionColumn, dataSource } = props;
         const columnList = [...columns, actionColumn];
         return (
-          <table class="file-table">
+          <table class='file-table'>
             <colgroup>
               {columnList.map((item) => {
                 const { width = 0, dataIndex } = item;
@@ -33,7 +33,7 @@
               })}
             </colgroup>
             <thead>
-              <tr class="file-table-tr">
+              <tr class='file-table-tr'>
                 {columnList.map((item) => {
                   const { title = '', align = 'center', dataIndex } = item;
                   return (
@@ -47,7 +47,7 @@
             <tbody>
               {dataSource.map((record = {}, index) => {
                 return (
-                  <tr class="file-table-tr" key={`${index + record.name || ''}`}>
+                  <tr class='file-table-tr' key={`${index + record.name || ''}`}>
                     {columnList.map((item) => {
                       const { dataIndex = '', customRender, align = 'center' } = item;
                       const render = customRender && isFunction(customRender);

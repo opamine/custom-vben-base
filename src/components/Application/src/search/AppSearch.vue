@@ -17,7 +17,7 @@
 
       return () => {
         return (
-          <div class="p-1" onClick={changeModal.bind(null, true)}>
+          <div class='p-1' onClick={changeModal.bind(null, true)}>
             <Tooltip>
               {{
                 title: () => t('common.searchText'),

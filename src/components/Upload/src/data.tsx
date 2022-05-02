@@ -39,10 +39,10 @@ export function createTableColumns(): BasicColumn[] {
         }
         return (
           <span>
-            <p class="truncate mb-1" title={text}>
+            <p class='truncate mb-1' title={text}>
               {text}
             </p>
-            <Progress percent={percent} size="small" status={status} />
+            <Progress percent={percent} size='small' status={status} />
           </span>
         );
       },
@@ -66,11 +66,11 @@ export function createTableColumns(): BasicColumn[] {
       width: 100,
       customRender: ({ text }) => {
         if (text === UploadResultStatus.SUCCESS) {
-          return <Tag color="green">{() => t('component.upload.uploadSuccess')}</Tag>;
+          return <Tag color='green'>{() => t('component.upload.uploadSuccess')}</Tag>;
         } else if (text === UploadResultStatus.ERROR) {
-          return <Tag color="red">{() => t('component.upload.uploadError')}</Tag>;
+          return <Tag color='red'>{() => t('component.upload.uploadError')}</Tag>;
         } else if (text === UploadResultStatus.UPLOADING) {
-          return <Tag color="blue">{() => t('component.upload.uploading')}</Tag>;
+          return <Tag color='blue'>{() => t('component.upload.uploading')}</Tag>;
         }
 
         return text;
