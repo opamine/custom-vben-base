@@ -159,7 +159,7 @@
 
         &__item {
           &-enter {
-            opacity: 0% !important;
+            opacity: 0 !important;
           }
         }
       }
@@ -245,7 +245,7 @@
           background-color: @primary-color;
 
           .@{prefix-cls}-list__item-enter {
-            opacity: 100%;
+            opacity: 1;
           }
         }
 
@@ -259,7 +259,7 @@
 
         &-enter {
           width: 30px;
-          opacity: 0%;
+          opacity: 0;
         }
       }
     }
