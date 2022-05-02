@@ -3,6 +3,7 @@ module.exports = {
   extends: ['stylelint-config-standard'],
   plugins: ['stylelint-order'],
   rules: {
+    'font-family-no-missing-generic-family-keyword': null,
     'no-descending-specificity': null,
     'function-no-unknown': null,
     'selector-class-pattern': null, // 即使关闭类名校验，请优先使用 'aaa-bbb' 格式

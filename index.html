@@ -28,10 +28,6 @@
           background-color: #000;
         }
 
-        html[data-theme='dark'] .app-loading .app-loading-title {
-          color: rgb(255 255 255 / 85%);
-        }
-
         .app-loading {
           display: flex;
           width: 100%;
@@ -67,6 +63,10 @@
           color: rgb(0 0 0 / 85%);
           justify-content: center;
           align-items: center;
+        }
+
+        html[data-theme='dark'] .app-loading .app-loading-title {
+          color: rgb(255 255 255 / 85%);
         }
 
         .app-loading .app-loading-logo {
@@ -123,11 +123,13 @@
           left: 0;
           animation-delay: 1.2s;
         }
+
         @keyframes ant-rotate {
           to {
             transform: rotate(405deg);
           }
         }
+
         @keyframes ant-spin-move {
           to {
             opacity: 1;

@@ -173,6 +173,7 @@
           font-size: 90px;
         }
       }
+
       @media screen and (min-width: @screen-lg) {
         span:not(.meridiem) {
           font-size: 220px;
@@ -184,6 +185,7 @@
           font-size: 260px;
         }
       }
+
       @media screen and (min-width: @screen-xxl) {
         span:not(.meridiem) {
           font-size: 320px;
