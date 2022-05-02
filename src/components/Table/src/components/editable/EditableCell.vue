@@ -377,7 +377,7 @@
             class={{ [`${this.prefixCls}__normal`]: true, 'ellipsis-cell': this.column.ellipsis }}
             onClick={this.handleEdit}
           >
-            <div class="cell-content" title={this.column.ellipsis ? this.getValues ?? '' : ''}>
+            <div class='cell-content' title={this.column.ellipsis ? this.getValues ?? '' : ''}>
               {this.column.editRender
                 ? this.column.editRender({
                     text: this.value,
@@ -402,7 +402,7 @@
                   rule={this.getRule}
                   ruleMessage={this.ruleMessage}
                   class={this.getWrapperClass}
-                  ref="elRef"
+                  ref='elRef'
                   onChange={this.handleChange}
                   onOptionsChange={this.handleOptionsChange}
                   onPressEnter={this.handleEnter}
