@@ -1,54 +1,9 @@
 module.exports = {
   root: true,
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-standard'],
   plugins: ['stylelint-order'],
-  customSyntax: 'postcss-html',
   rules: {
-    'function-no-unknown': null,
-    'selector-class-pattern': null,
-    'selector-pseudo-class-no-unknown': [
-      true,
-      {
-        ignorePseudoClasses: ['global'],
-      },
-    ],
-    'selector-pseudo-element-no-unknown': [
-      true,
-      {
-        ignorePseudoElements: ['v-deep'],
-      },
-    ],
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'tailwind',
-          'apply',
-          'variants',
-          'responsive',
-          'screen',
-          'function',
-          'if',
-          'each',
-          'include',
-          'mixin',
-        ],
-      },
-    ],
-    'no-empty-source': null,
-    'string-quotes': null,
-    'named-grid-areas-no-invalid': null,
-    'unicode-bom': 'never',
-    'no-descending-specificity': null,
-    'font-family-no-missing-generic-family-keyword': null,
-    'declaration-colon-space-after': 'always-single-line',
-    'declaration-colon-space-before': 'never',
-    'rule-empty-line-before': [
-      'always',
-      {
-        ignore: ['after-comment', 'first-nested'],
-      },
-    ],
+    'string-quotes': 'single', // stylelint-config-standard 中配置的是 'double', prettier 中配置 'single', 手动以 prettier 为准
     'order/order': [
       [
         'dollar-variables',
@@ -68,11 +23,33 @@ module.exports = {
       { severity: 'warning' },
     ],
   },
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
   overrides: [
     {
       files: ['*.html', '**/*.html'],
       customSyntax: 'postcss-html',
+      rules: {
+        'declaration-block-trailing-semicolon': null, // 详见: https://www.cnblogs.com/OwenLin/p/14990993.html
+      },
+    },
+    {
+      files: ['*.vue', '**/*.vue'],
+      customSyntax: 'postcss-html',
+      rules: {
+        'declaration-block-trailing-semicolon': null, // 详见: https://www.cnblogs.com/OwenLin/p/14990993.html
+        'selector-pseudo-class-no-unknown': [
+          true,
+          {
+            ignorePseudoClasses: ['deep', 'slotted', 'global'],
+          },
+        ],
+        // 以下深度样式选择器用法在 vue3 中已被废弃，推荐上面这种方式 :deep()、:slotted()、:global()
+        // 'selector-pseudo-element-no-unknown': [
+        //   true,
+        //   {
+        //     ignorePseudoElements: ['v-deep', 'v-global', 'v-slotted'],
+        //   },
+        // ],
+      },
     },
     {
       files: ['*.less', '**/*.less'],
@@ -84,26 +61,13 @@ module.exports = {
             ignorePseudoClasses: ['deep', 'slotted', 'global'],
           },
         ],
-      },
-    },
-    {
-      files: ['*.vue', '**/*.vue'],
-      customSyntax: 'postcss-html',
-      rules: {
-        'keyframes-name-pattern': null,
-        'declaration-block-trailing-semicolon': null, // 详见: https://www.cnblogs.com/OwenLin/p/14990993.html
-        'selector-pseudo-class-no-unknown': [
-          true,
-          {
-            ignorePseudoClasses: ['slotted', 'global'],
-          },
-        ],
-        'selector-pseudo-element-no-unknown': [
-          true,
-          {
-            ignorePseudoElements: ['v-deep', 'v-global', 'v-slotted'],
-          },
-        ],
+        // 以下深度样式选择器用法在 vue3 中已被废弃，推荐上面这种方式 :deep()、:slotted()、:global()
+        // 'selector-pseudo-element-no-unknown': [
+        //   true,
+        //   {
+        //     ignorePseudoElements: ['v-deep', 'v-global', 'v-slotted'],
+        //   },
+        // ],
       },
     },
   ],
