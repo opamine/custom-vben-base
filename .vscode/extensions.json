@@ -8,7 +8,7 @@
     "dbaeumer.vscode-eslint", // ESLint
     "stylelint.vscode-stylelint", // Stylelint
     "esbenp.prettier-vscode", // Prettier - Code formatter
-    "johnsoncodehk.volar", // Vue Language Features (Volar)
+    "vue.volar", // Vue Language Features (Volar)
     "christian-kohler.path-intellisense", // Path Intellisense
     "mrmlnc.vscode-less", // Less IntelliSense
     "antfu.iconify", // Iconify IntelliSense
