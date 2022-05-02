@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
-  plugins: ['stylelint-order'],
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  plugins: ['stylelint-order'],
   customSyntax: 'postcss-html',
   rules: {
     'function-no-unknown': null,
@@ -43,14 +43,12 @@ module.exports = {
     'font-family-no-missing-generic-family-keyword': null,
     'declaration-colon-space-after': 'always-single-line',
     'declaration-colon-space-before': 'never',
-    // 'declaration-block-trailing-semicolon': 'always',
     'rule-empty-line-before': [
       'always',
       {
         ignore: ['after-comment', 'first-nested'],
       },
     ],
-    'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
     'order/order': [
       [
         'dollar-variables',
@@ -70,17 +68,34 @@ module.exports = {
       { severity: 'warning' },
     ],
   },
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
+  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
   overrides: [
     {
-      files: ['*.vue', '**/*.vue', '*.html', '**/*.html'],
-      extends: ['stylelint-config-recommended'],
+      files: ['*.html', '**/*.html'],
+      customSyntax: 'postcss-html',
+    },
+    {
+      files: ['*.less', '**/*.less'],
+      customSyntax: 'postcss-less',
       rules: {
-        'keyframes-name-pattern': null,
         'selector-pseudo-class-no-unknown': [
           true,
           {
-            ignorePseudoClasses: ['deep', 'global'],
+            ignorePseudoClasses: ['deep', 'slotted', 'global'],
+          },
+        ],
+      },
+    },
+    {
+      files: ['*.vue', '**/*.vue'],
+      customSyntax: 'postcss-html',
+      rules: {
+        'keyframes-name-pattern': null,
+        'declaration-block-trailing-semicolon': null, // 详见: https://www.cnblogs.com/OwenLin/p/14990993.html
+        'selector-pseudo-class-no-unknown': [
+          true,
+          {
+            ignorePseudoClasses: ['slotted', 'global'],
           },
         ],
         'selector-pseudo-element-no-unknown': [
@@ -90,11 +105,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      files: ['*.less', '**/*.less'],
-      customSyntax: 'postcss-less',
-      extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue'],
     },
   ],
 };
