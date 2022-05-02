@@ -3,6 +3,9 @@ module.exports = {
   extends: ['stylelint-config-standard'],
   plugins: ['stylelint-order'],
   rules: {
+    'no-descending-specificity': null,
+    'function-no-unknown': null,
+    'selector-class-pattern': null, // 即使关闭类名校验，请优先使用 'aaa-bbb' 格式
     'string-quotes': 'single', // stylelint-config-standard 中配置的是 'double', prettier 中配置 'single', 手动以 prettier 为准
     'order/order': [
       [
