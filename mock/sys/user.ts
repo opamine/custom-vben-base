@@ -7,7 +7,7 @@ export function createFakeUserList() {
       userId: '1',
       username: 'Dopamine',
       realName: 'Dopamine',
-      avatar: 'https://ramses.cn/static/head.png',
+      avatar: 'https://avatars.githubusercontent.com/u/49026458?v=4',
       desc: 'manager',
       password: '123456',
       token: 'fakeToken1',
