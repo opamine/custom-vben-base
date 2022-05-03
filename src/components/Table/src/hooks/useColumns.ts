@@ -11,19 +11,19 @@ import { formatToDate } from '/@/utils/dateUtil';
 import { ACTION_COLUMN_FLAG, DEFAULT_ALIGN, INDEX_COLUMN_FLAG, PAGE_SIZE } from '../const';
 
 function handleItem(item: BasicColumn, ellipsis: boolean) {
-  const { key, dataIndex, children } = item;
+  const { key: _key, dataIndex: _dataIndex, children } = item;
   item.align = item.align || DEFAULT_ALIGN;
   if (ellipsis) {
-    if (!key) {
-      item.key = dataIndex;
-    }
+    // if (!key) {
+    //   item.key = dataIndex;
+    // }
     if (!isBoolean(item.ellipsis)) {
       Object.assign(item, {
         ellipsis,
       });
     }
   }
-  if (children && children.length) {
+  if (children?.length) {
     handleChildren(children, !!ellipsis);
   }
 }
