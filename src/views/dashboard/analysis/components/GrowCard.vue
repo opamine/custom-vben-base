@@ -13,7 +13,7 @@
         </template>
 
         <div class="py-2 px-4 flex justify-between">
-          <CountTo :prefix="item.prefix" :startVal="0" :endVal="item.value" class="text-xxl" />
+          <CountTo :prefix="item.prefix" :startVal="0" :endVal="item.value" class="text-2xl" />
           <Icon :icon="item.icon" :size="40" />
         </div>
 
@@ -29,11 +29,46 @@
   import { CountTo } from '/@/components/CountTo/index';
   import { Icon } from '/@/components/Icon';
   import { Tag, Card } from 'ant-design-vue';
-  import { growCardList } from '../data';
 
   defineProps({
     loading: {
       type: Boolean,
     },
   });
+
+  const growCardList = [
+    {
+      title: '访问数',
+      icon: 'visit-count|svg',
+      value: 2000,
+      total: 120000,
+      color: 'green',
+      action: '日',
+    },
+    {
+      title: '成交额',
+      icon: 'total-sales|svg',
+      value: 20000,
+      total: 500000,
+      color: 'blue',
+      action: '周',
+      prefix: '$',
+    },
+    {
+      title: '下载数',
+      icon: 'download-count|svg',
+      value: 8000,
+      total: 120000,
+      color: 'orange',
+      action: '月',
+    },
+    {
+      title: '成交数',
+      icon: 'transaction|svg',
+      value: 5000,
+      total: 50000,
+      color: 'pink',
+      action: '年',
+    },
+  ];
 </script>
