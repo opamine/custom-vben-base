@@ -21,5 +21,5 @@
 
   setTimeout(() => {
     loading.value = false;
-  }, 500);
+  }, 300);
 </script>
