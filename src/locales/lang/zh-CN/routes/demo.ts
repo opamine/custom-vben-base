@@ -102,7 +102,7 @@ export default {
   iframe: {
     frame: '外部页面',
     antv: 'antVue文档(内嵌)',
-    docExternal: '项目文档(外链)',
+    docExternal: '百度(外链)',
   },
   level: { level: '多级菜单' },
   page: {

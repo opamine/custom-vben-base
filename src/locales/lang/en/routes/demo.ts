@@ -106,7 +106,7 @@ export default {
   iframe: {
     frame: 'External',
     antv: 'antVue doc (embedded)',
-    docExternal: 'Project doc (external)',
+    docExternal: 'Baidu (external)',
   },
   level: { level: 'MultiMenu' },
   page: {

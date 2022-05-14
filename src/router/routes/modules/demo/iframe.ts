@@ -26,7 +26,7 @@ const iframe: AppRouteModule = {
       },
     },
     {
-      path: 'https://vvbin.cn/doc-next/',
+      path: 'https://baidu.com',
       name: 'DocExternal',
       component: IFrame,
       meta: {
