@@ -97,10 +97,6 @@ export default {
     breadcrumbChildren: 'Level mode',
     breadcrumbChildrenDetail: 'Level mode detail',
   },
-  flow: {
-    name: 'Graphics editor',
-    flowChart: 'FlowChart',
-  },
   form: {
     form: 'Form',
     basic: 'Basic',
@@ -161,9 +157,6 @@ export default {
     back: 'background',
     backPage: 'Page',
     backBtn: 'Button',
-  },
-  setup: {
-    page: 'Intro page',
   },
   system: {
     moduleName: 'System management',
