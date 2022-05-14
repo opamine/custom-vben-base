@@ -17,15 +17,6 @@ const iframe: AppRouteModule = {
 
   children: [
     {
-      path: 'doc',
-      name: 'Doc',
-      component: IFrame,
-      meta: {
-        frameSrc: 'https://vvbin.cn/doc-next/',
-        title: t('routes.demo.iframe.doc'),
-      },
-    },
-    {
       path: 'antv',
       name: 'Antv',
       component: IFrame,
