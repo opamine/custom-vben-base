@@ -89,7 +89,8 @@
       }
 
       function renderMenuItem(items: ContextMenuItem[]) {
-        return items.map((item) => {
+        const visibleItems = items.filter((item) => !item.hidden);
+        return visibleItems.map((item) => {
           const { disabled, label, children, divider = false } = item;
 
           const contentProps = {
@@ -196,7 +197,6 @@
       .ant-divider {
         margin: 0;
       }
-
       .item-style();
     }
 
