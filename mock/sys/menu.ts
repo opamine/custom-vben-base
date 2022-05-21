@@ -136,6 +136,34 @@ const levelRoute = {
   ],
 };
 
+const linkRoute = {
+  path: '/link',
+  name: 'Link',
+  component: 'LAYOUT',
+  meta: {
+    icon: 'ion:tv-outline',
+    title: 'routes.demo.iframe.frame',
+  },
+  children: [
+    {
+      path: 'doc',
+      name: 'Doc',
+      meta: {
+        title: 'routes.demo.iframe.doc',
+        frameSrc: 'https://vvbin.cn/doc-next/',
+      },
+    },
+    {
+      path: 'https://vvbin.cn/doc-next/',
+      name: 'DocExternal',
+      component: 'LAYOUT',
+      meta: {
+        title: 'routes.demo.iframe.docExternal',
+      },
+    },
+  ],
+};
+
 const sysRoute = {
   path: '/system',
   name: 'System',
@@ -207,34 +235,6 @@ const sysRoute = {
   ],
 };
 
-const linkRoute = {
-  path: '/link',
-  name: 'Link',
-  component: 'LAYOUT',
-  meta: {
-    icon: 'ion:tv-outline',
-    title: 'routes.demo.iframe.frame',
-  },
-  children: [
-    {
-      path: 'doc',
-      name: 'Doc',
-      meta: {
-        title: 'routes.demo.iframe.doc',
-        frameSrc: 'https://vvbin.cn/doc-next/',
-      },
-    },
-    {
-      path: 'https://vvbin.cn/doc-next/',
-      name: 'DocExternal',
-      component: 'LAYOUT',
-      meta: {
-        title: 'routes.demo.iframe.docExternal',
-      },
-    },
-  ],
-};
-
 export default [
   {
     url: '/basic-api/getMenuList',
@@ -258,7 +258,7 @@ export default [
           break;
         case '2':
           dashboardRoute.redirect = dashboardRoute.path + '/' + dashboardRoute.children[1].path;
-          menu = [dashboardRoute, authRoute, levelRoute, linkRoute];
+          menu = [dashboardRoute, authRoute, levelRoute, linkRoute, sysRoute];
           break;
         default:
           menu = [];
