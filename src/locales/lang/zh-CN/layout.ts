@@ -54,7 +54,7 @@ export default {
     operatingContent: '复制成功,请到 src/settings/projectSetting.ts 中修改配置！',
     resetSuccess: '重置成功！',
 
-    togglePermissionMode: '切换权限模式',
+    togglePermissionMode: '切换菜单模式',
 
     copyBtn: '拷贝',
     clearBtn: '清空缓存并返回登录页',

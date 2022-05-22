@@ -1,6 +1,5 @@
 <template>
   <PageWrapper contentBackground title="按钮权限控制" contentClass="p-4">
-    <CurrentPermissionMode />
     <p>
       当前拥有的code列表: <a> {{ permissionStore.getPermCodeList }} </a>
     </p>
@@ -60,7 +59,6 @@
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
   import { Alert, Divider } from 'ant-design-vue';
-  import CurrentPermissionMode from '../CurrentPermissionMode.vue';
   import { usePermission } from '/@/hooks/web/usePermission';
   import { Authority } from '/@/components/Authority';
   import { usePermissionStore } from '/@/store/modules/permission';
@@ -70,7 +68,7 @@
   import { useUserStore } from '/@/store/modules/user';
 
   export default defineComponent({
-    components: { Alert, PageWrapper, CurrentPermissionMode, Divider, Authority },
+    components: { Alert, PageWrapper, Divider, Authority },
     setup() {
       const { hasPermission } = usePermission();
       const permissionStore = usePermissionStore();

@@ -135,9 +135,9 @@ export default {
     listSearch: '搜索列表',
   },
   permission: {
-    permission: '权限管理',
+    permission: '菜单模式',
 
-    back: '基于后台权限',
+    back: '基于后端权限',
     backPage: '页面权限',
     backBtn: '按钮权限',
   },

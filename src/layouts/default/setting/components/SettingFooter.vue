@@ -1,8 +1,8 @@
 <template>
   <div :class="prefixCls">
     <div
-      >当前权限模式：{{
-        permissionMode === PermissionModeEnum.BACK_END ? '后台权限模式' : '前端角色权限模式'
+      >当前菜单模式：{{
+        permissionMode === PermissionModeEnum.BACK_END ? '后台权限模式' : '前端模式'
       }}</div
     >
     <a-button type="primary" block @click="togglePermissionMode" class="mt-3">
