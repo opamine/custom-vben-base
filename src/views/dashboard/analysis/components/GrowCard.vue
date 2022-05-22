@@ -39,7 +39,7 @@
   const growCardList = [
     {
       title: '访问数',
-      icon: 'visit-count|svg',
+      icon: 'el:universal-access',
       value: 2000,
       total: 120000,
       color: 'green',
@@ -47,7 +47,7 @@
     },
     {
       title: '成交额',
-      icon: 'total-sales|svg',
+      icon: 'cib:ideal',
       value: 20000,
       total: 500000,
       color: 'blue',
@@ -56,7 +56,7 @@
     },
     {
       title: '下载数',
-      icon: 'download-count|svg',
+      icon: 'entypo:download',
       value: 8000,
       total: 120000,
       color: 'orange',
@@ -64,7 +64,7 @@
     },
     {
       title: '成交数',
-      icon: 'transaction|svg',
+      icon: 'bxs:pie-chart-alt-2',
       value: 5000,
       total: 50000,
       color: 'pink',

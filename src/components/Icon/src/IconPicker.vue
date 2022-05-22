@@ -37,7 +37,7 @@
                 >
                   <!-- <Icon :icon="icon" :prefix="prefix" /> -->
                   <SvgIcon v-if="isSvgMode" :name="icon" />
-                  <Icon :icon="icon" v-else />
+                  <Icon v-else :icon="icon" />
                 </li>
               </ul>
             </ScrollContainer>
