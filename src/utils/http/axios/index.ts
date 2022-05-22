@@ -1,4 +1,4 @@
-// axios配置  可自行根据项目进行更改，只需更改该文件即可，其他文件可以不动
+// axios 配置  可自行根据项目进行更改，只需更改该文件即可，其他文件可以不动
 // The axios configuration can be changed according to the project, just change the file, other files can be left unchanged
 
 import type { AxiosResponse } from 'axios';
@@ -17,7 +17,6 @@ import { useErrorLogStoreWithOut } from '/@/store/modules/errorLog';
 import { useI18n } from '/@/hooks/web/useI18n';
 import { joinTimestamp, formatRequestDate } from './helper';
 import { useUserStoreWithOut } from '/@/store/modules/user';
-import { AxiosRetry } from '/@/utils/http/axios/axiosRetry';
 
 const globSetting = useGlobSetting();
 const urlPrefix = globSetting.urlPrefix;
@@ -85,7 +84,7 @@ const transform: AxiosTransform = {
     throw new Error(timeoutMsg || t('sys.api.apiRequestFailed'));
   },
 
-  // 请求之前处理config
+  // 请求之前处理 config
   beforeRequestHook: (config, options) => {
     const { apiUrl, joinPrefix, joinParamsToUrl, formatDate, joinTime = true, urlPrefix } = options;
 
@@ -159,7 +158,7 @@ const transform: AxiosTransform = {
   /**
    * @description: 响应错误处理
    */
-  responseInterceptorsCatch: (axiosInstance: AxiosResponse, error: any) => {
+  responseInterceptorsCatch: (_axiosInstance: AxiosResponse, error: any) => {
     const { t } = useI18n();
     const errorLogStore = useErrorLogStoreWithOut();
     errorLogStore.addAjaxErrorInfo(error);
@@ -190,14 +189,6 @@ const transform: AxiosTransform = {
     }
 
     checkStatus(error?.response?.status, msg, errorMessageMode);
-
-    // 添加自动重试机制 保险起见 只针对GET请求
-    const retryRequest = new AxiosRetry();
-    const { isOpenRetry } = config.requestOptions.retryRequest;
-    config.method?.toUpperCase() === RequestEnum.GET &&
-      isOpenRetry &&
-      // @ts-ignore
-      retryRequest.retry(axiosInstance, error);
     return Promise.reject(error);
   },
 };
@@ -243,11 +234,6 @@ function createAxios(opt?: Partial<CreateAxiosOptions>) {
           ignoreCancelToken: true,
           // 是否携带token
           withToken: true,
-          retryRequest: {
-            isOpenRetry: true,
-            count: 5,
-            waitTime: 100,
-          },
         },
       },
       opt || {},

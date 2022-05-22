@@ -23,8 +23,6 @@ export interface RequestOptions {
   ignoreCancelToken?: boolean;
   // Whether to send token in header
   withToken?: boolean;
-  // 请求重试机制
-  retryRequest?: RetryRequest;
 }
 
 export interface RetryRequest {
