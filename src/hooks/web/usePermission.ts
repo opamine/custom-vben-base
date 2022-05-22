@@ -2,13 +2,8 @@ import type { RouteRecordRaw } from 'vue-router';
 
 import { useAppStore } from '/@/store/modules/app';
 import { usePermissionStore } from '/@/store/modules/permission';
-// import { useUserStore } from '/@/store/modules/user';
-
 import { useTabs } from './useTabs';
-
 import { router, resetRouter } from '/@/router';
-// import { RootRoute } from '/@/router/routes';
-
 import projectSetting from '/@/settings/projectSetting';
 import { PermissionModeEnum } from '/@/enums/appEnum';
 import { RoleEnum } from '/@/enums/roleEnum';
@@ -63,14 +58,6 @@ export function usePermission() {
     }
 
     const permMode = projectSetting.permissionMode;
-
-    // 去除前端角色权限模式
-    // if (PermissionModeEnum.ROUTE_MAPPING === permMode) {
-    //   if (!isArray(value)) {
-    //     return userStore.getRoleList?.includes(value as RoleEnum);
-    //   }
-    //   return (intersection(value, userStore.getRoleList) as RoleEnum[]).length > 0;
-    // }
 
     if (PermissionModeEnum.BACK_END === permMode) {
       const allCodeList = permissionStore.getPermCodeList as string[];
