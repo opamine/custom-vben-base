@@ -1,10 +1,8 @@
 <template>
-  <PageWrapper contentBackground title="按钮权限控制" contentClass="p-4">
+  <div class="bg-white m-4 p-4">
     <p>
       当前拥有的code列表: <a> {{ permissionStore.getPermCodeList }} </a>
     </p>
-    <Divider />
-
     <Divider>组件方式判断权限</Divider>
     <Authority :value="'1000'">
       <a-button type="primary" class="mx-4"> 拥有code ['1000']权限可见 </a-button>
@@ -39,7 +37,7 @@
     <a-button v-auth="['1000', '2000']" color="error" class="mx-4">
       拥有code ['1000','2000']角色权限可见
     </a-button>
-  </PageWrapper>
+  </div>
 </template>
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
@@ -48,11 +46,10 @@
   import { Authority } from '/@/components/Authority';
   import { usePermissionStore } from '/@/store/modules/permission';
   import { PermissionModeEnum } from '/@/enums/appEnum';
-  import { PageWrapper } from '/@/components/Page';
   import { useAppStore } from '/@/store/modules/app';
 
   export default defineComponent({
-    components: { PageWrapper, Divider, Authority },
+    components: { Divider, Authority },
     setup() {
       const { hasPermission } = usePermission();
       const permissionStore = usePermissionStore();
