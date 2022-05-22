@@ -8,7 +8,7 @@
     <Alert
       class="mt-4"
       type="info"
-      message="点击后请查看按钮变化(必须处于后台权限模式才可测试此页面所展示的功能)"
+      message="点击后请查看按钮变化(必须处于后端权限模式才可测试此页面所展示的功能)"
       show-icon
     />
     <Divider />
@@ -46,7 +46,7 @@
         拥有code ['1000','2000']角色权限可见
       </a-button>
 
-      <Divider>指令方式方式判断权限(该方式不能动态修改权限.)</Divider>
+      <Divider>指令方式方式判断权限</Divider>
       <a-button v-auth="'1000'" type="primary" class="mx-4"> 拥有code ['1000']权限可见 </a-button>
 
       <a-button v-auth="'2000'" color="success" class="mx-4"> 拥有code ['2000']权限可见 </a-button>
