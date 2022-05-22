@@ -138,7 +138,7 @@ export default {
     permission: '菜单模式',
 
     back: '基于后端权限',
-    backPage: '页面权限',
+    backPage: '菜单权限',
     backBtn: '按钮权限',
   },
   system: {
