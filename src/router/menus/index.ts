@@ -24,7 +24,7 @@ const getPermissionMode = () => {
   return appStore.getProjectConfig.permissionMode;
 };
 const isBackMode = () => {
-  return getPermissionMode() === PermissionModeEnum.BACK;
+  return getPermissionMode() === PermissionModeEnum.BACK_END;
 };
 
 const isRouteMappingMode = () => {

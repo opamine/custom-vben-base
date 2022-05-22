@@ -165,7 +165,7 @@ export const usePermissionStore = defineStore({
           break;
 
         //  If you are sure that you do not need to do background dynamic permissions, please comment the entire judgment below
-        case PermissionModeEnum.BACK:
+        case PermissionModeEnum.BACK_END:
           const { createMessage } = useMessage();
 
           createMessage.loading({

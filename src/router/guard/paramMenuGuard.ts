@@ -39,7 +39,7 @@ const getPermissionMode = () => {
 };
 
 const isBackMode = () => {
-  return getPermissionMode() === PermissionModeEnum.BACK;
+  return getPermissionMode() === PermissionModeEnum.BACK_END;
 };
 
 const isRouteMappingMode = () => {

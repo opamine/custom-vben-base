@@ -21,7 +21,7 @@
   const userId = ref<Nullable<number | string>>(0);
 
   const isBackMode = () => {
-    return appStore.getProjectConfig.permissionMode === PermissionModeEnum.BACK;
+    return appStore.getProjectConfig.permissionMode === PermissionModeEnum.BACK_END;
   };
 
   onMounted(() => {

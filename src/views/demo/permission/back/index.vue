@@ -41,7 +41,7 @@
       const appStore = useAppStore();
 
       const isBackPermissionMode = computed(
-        () => appStore.getProjectConfig.permissionMode === PermissionModeEnum.BACK,
+        () => appStore.getProjectConfig.permissionMode === PermissionModeEnum.BACK_END,
       );
 
       async function switchToken(userId: number) {

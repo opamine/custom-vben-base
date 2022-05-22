@@ -30,9 +30,9 @@ export function usePermission() {
   async function togglePermissionMode() {
     appStore.setProjectConfig({
       permissionMode:
-        projectSetting.permissionMode === PermissionModeEnum.BACK
+        projectSetting.permissionMode === PermissionModeEnum.BACK_END
           ? PermissionModeEnum.ROUTE_MAPPING
-          : PermissionModeEnum.BACK,
+          : PermissionModeEnum.BACK_END,
     });
     location.reload();
   }
@@ -71,7 +71,7 @@ export function usePermission() {
       return (intersection(value, userStore.getRoleList) as RoleEnum[]).length > 0;
     }
 
-    if (PermissionModeEnum.BACK === permMode) {
+    if (PermissionModeEnum.BACK_END === permMode) {
       const allCodeList = permissionStore.getPermCodeList as string[];
       if (!isArray(value)) {
         return allCodeList.includes(value);
