@@ -102,7 +102,6 @@
 <style lang="less">
   .app-iconify {
     display: inline-block;
-    // vertical-align: middle;
 
     &-spin {
       svg {
