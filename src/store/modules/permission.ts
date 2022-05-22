@@ -149,13 +149,6 @@ export const usePermissionStore = defineStore({
       };
 
       switch (permissionMode) {
-        case PermissionModeEnum.ROLE:
-          routes = filter(asyncRoutes, routeFilter);
-          routes = routes.filter(routeFilter);
-          // Convert multi-level routing to level 2 routing
-          routes = flatMultiLevelRoutes(routes);
-          break;
-
         case PermissionModeEnum.ROUTE_MAPPING:
           routes = filter(asyncRoutes, routeFilter);
           routes = routes.filter(routeFilter);

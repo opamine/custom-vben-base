@@ -64,7 +64,7 @@ export function usePermission() {
 
     const permMode = projectSetting.permissionMode;
 
-    if ([PermissionModeEnum.ROUTE_MAPPING, PermissionModeEnum.ROLE].includes(permMode)) {
+    if (PermissionModeEnum.ROUTE_MAPPING === permMode) {
       if (!isArray(value)) {
         return userStore.getRoleList?.includes(value as RoleEnum);
       }
