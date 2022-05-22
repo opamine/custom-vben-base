@@ -6,13 +6,11 @@
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
   import { RoleEnum } from '/@/enums/roleEnum';
-  import { usePermission } from '/@/hooks/web/usePermission';
   import { PermissionModeEnum } from '/@/enums/appEnum';
   import { useAppStore } from '/@/store/modules/app';
 
   export default defineComponent({
     setup() {
-      const { refreshMenu } = usePermission();
       const appStore = useAppStore();
 
       const isBackPermissionMode = computed(
@@ -21,7 +19,6 @@
 
       return {
         RoleEnum,
-        refreshMenu,
         isBackPermissionMode,
       };
     },

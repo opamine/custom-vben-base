@@ -2,7 +2,7 @@
   <div :class="prefixCls">
     <div
       >当前菜单模式：{{
-        permissionMode === PermissionModeEnum.BACK_END ? '后台权限模式' : '前端模式'
+        permissionMode === PermissionModeEnum.BACK_END ? '后端权限模式' : '前端模式'
       }}</div
     >
     <a-button type="primary" block @click="togglePermissionMode" class="mt-3">

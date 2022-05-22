@@ -91,7 +91,7 @@ export const usePermissionStore = defineStore({
       this.backMenuList = [];
       this.lastBuildMenuTime = 0;
     },
-    async changePermissionCode() {
+    async refreshPermissionCode() {
       const codeList = await getPermCode();
       this.setPermCodeList(codeList);
     },
@@ -103,9 +103,11 @@ export const usePermissionStore = defineStore({
       let routes: AppRouteRecordRaw[] = [];
       const { permissionMode = projectSetting.permissionMode } = appStore.getProjectConfig;
 
+      // 如果存在权限标识符功能(一般用于按钮权限)，需要调用获取权限标识符的接口
+      this.refreshPermissionCode();
+
       const routeRemoveIgnoreFilter = (route: AppRouteRecordRaw) => {
-        const { meta } = route;
-        const { ignoreRoute } = meta || {};
+        const { ignoreRoute } = route.meta || {};
         return !ignoreRoute;
       };
 
@@ -133,7 +135,7 @@ export const usePermissionStore = defineStore({
         }
         try {
           patcher(routes);
-        } catch (e) {
+        } catch (error) {
           // 已处理完毕跳出循环
         }
         return;
@@ -167,7 +169,6 @@ export const usePermissionStore = defineStore({
           // this function may only need to be executed once, and the actual project can be put at the right time by itself
           let routeList: AppRouteRecordRaw[] = [];
           try {
-            this.changePermissionCode();
             routeList = (await getMenuList()) as AppRouteRecordRaw[];
           } catch (error) {
             console.error(error);
