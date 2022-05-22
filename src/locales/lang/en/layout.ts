@@ -54,6 +54,8 @@ export default {
       'The copy is successful, please go to src/settings/projectSetting.ts to modify the configuration!',
     resetSuccess: 'Successfully reset!',
 
+    togglePermissionMode: 'togglePermissionMode',
+
     copyBtn: 'Copy',
     clearBtn: 'Clear cache and to the login page',
 
