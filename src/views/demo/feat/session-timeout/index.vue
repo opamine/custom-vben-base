@@ -35,7 +35,7 @@
           userStore.setSessionTimeout(true);
         } else {
           try {
-            // 这个api会返回状态码为401的响应
+            // 这个 api 会返回状态码为 401 的响应
             await sessionTimeoutApi();
           } catch (error) {
             console.log('登录超时, 请重新登录!');
