@@ -60,7 +60,6 @@ export default {
   feat: {
     feat: '功能',
     icon: '图标',
-    sessionTimeout: '登录过期',
     tabs: '标签页操作',
     tabDetail: '标签详情页',
     print: '打印',

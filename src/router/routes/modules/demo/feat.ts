@@ -32,14 +32,6 @@ const feat: AppRouteModule = {
       },
     },
     {
-      path: 'session-timeout',
-      name: 'SessionTimeout',
-      component: () => import('/@/views/demo/feat/session-timeout/index.vue'),
-      meta: {
-        title: t('routes.demo.feat.sessionTimeout'),
-      },
-    },
-    {
       path: 'print',
       name: 'Print',
       component: () => import('/@/views/demo/feat/print/index.vue'),
