@@ -51,13 +51,6 @@ export default {
     tinymceBasic: 'Basic',
     tinymceForm: 'embedded form',
   },
-  excel: {
-    excel: 'Excel',
-    customExport: 'Select export format',
-    jsonExport: 'JSON data export',
-    arrayExport: 'Array data export',
-    importExcel: 'Import',
-  },
   feat: {
     feat: 'Page Function',
     icon: 'Icon',
