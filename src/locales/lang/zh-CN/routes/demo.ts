@@ -62,7 +62,6 @@ export default {
     icon: '图标',
     tabs: '标签页操作',
     tabDetail: '标签详情页',
-    contextMenu: '右键菜单',
     download: '文件下载',
     clickOutSide: 'ClickOutSide组件',
     imgPreview: '图片预览',

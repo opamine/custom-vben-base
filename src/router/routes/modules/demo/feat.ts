@@ -106,15 +106,6 @@ const feat: AppRouteModule = {
         },
       ],
     },
-
-    {
-      path: 'context-menu',
-      name: 'ContextMenuDemo',
-      component: () => import('/@/views/demo/feat/context-menu/index.vue'),
-      meta: {
-        title: t('routes.demo.feat.contextMenu'),
-      },
-    },
     {
       path: 'download',
       name: 'DownLoadDemo',

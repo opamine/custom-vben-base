@@ -63,7 +63,6 @@ export default {
     icon: 'Icon',
     tabs: 'Tabs',
     tabDetail: 'Tab Detail',
-    contextMenu: 'Context Menu',
     download: 'Download',
     clickOutSide: 'ClickOutSide',
     imgPreview: 'Picture Preview',
