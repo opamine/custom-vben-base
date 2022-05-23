@@ -32,14 +32,6 @@ const feat: AppRouteModule = {
       },
     },
     {
-      path: 'print',
-      name: 'Print',
-      component: () => import('/@/views/demo/feat/print/index.vue'),
-      meta: {
-        title: t('routes.demo.feat.print'),
-      },
-    },
-    {
       path: 'tabs',
       name: 'TabsDemo',
       component: () => import('/@/views/demo/feat/tabs/index.vue'),
