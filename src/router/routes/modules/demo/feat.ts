@@ -155,14 +155,6 @@ const feat: AppRouteModule = {
       },
     },
     {
-      path: 'full-screen',
-      name: 'FullScreenDemo',
-      component: () => import('/@/views/demo/feat/full-screen/index.vue'),
-      meta: {
-        title: t('routes.demo.feat.fullScreen'),
-      },
-    },
-    {
       path: '/error-log',
       name: 'ErrorLog',
       component: () => import('/@/views/sys/error-log/index.vue'),

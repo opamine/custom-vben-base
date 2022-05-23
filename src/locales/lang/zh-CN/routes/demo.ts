@@ -61,7 +61,6 @@ export default {
     copy: '剪切板',
     msg: '消息提示',
     watermark: '水印',
-    fullScreen: '全屏',
     errorLog: '错误日志',
     tab: 'Tab带参',
     tab1: 'Tab带参1',
