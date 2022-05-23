@@ -17,10 +17,13 @@ import { useErrorLogStoreWithOut } from '/@/store/modules/errorLog';
 import { useI18n } from '/@/hooks/web/useI18n';
 import { joinTimestamp, formatRequestDate } from './helper';
 import { useUserStoreWithOut } from '/@/store/modules/user';
+import projectSetting from '/@/settings/projectSetting';
+import { SessionTimeoutProcessingEnum } from '/@/enums/appEnum';
 
 const globSetting = useGlobSetting();
 const urlPrefix = globSetting.urlPrefix;
 const { createMessage, createErrorModal } = useMessage();
+const stp = projectSetting.sessionTimeoutProcessing;
 
 /**
  * @description: 数据处理，方便区分多种处理方式
@@ -64,8 +67,11 @@ const transform: AxiosTransform = {
       case ResultEnum.TIMEOUT:
         timeoutMsg = t('sys.api.timeoutMessage');
         const userStore = useUserStoreWithOut();
-        userStore.setToken(undefined);
-        userStore.logout(true);
+        if (stp === SessionTimeoutProcessingEnum.PAGE_COVERAGE) {
+          userStore.setSessionTimeout(true);
+        } else {
+          userStore.logout(true);
+        }
         break;
       default:
         if (message) {
