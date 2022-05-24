@@ -56,8 +56,6 @@ export default {
     icon: 'Icon',
     tabs: 'Tabs',
     tabDetail: 'Tab Detail',
-    download: 'Download',
-    clickOutSide: 'ClickOutSide',
     imgPreview: 'Picture Preview',
     copy: 'Clipboard',
     msg: 'Message prompt',

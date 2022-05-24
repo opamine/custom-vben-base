@@ -55,8 +55,6 @@ export default {
     icon: '图标',
     tabs: '标签页操作',
     tabDetail: '标签详情页',
-    download: '文件下载',
-    clickOutSide: 'ClickOutSide组件',
     imgPreview: '图片预览',
     copy: '剪切板',
     msg: '消息提示',
