@@ -6,15 +6,9 @@
       v-if="!sessionTimeout && showLocale"
     />
     <AppDarkModeToggle class="absolute top-3 right-7 enter-x" v-if="!sessionTimeout" />
-
-    <span class="-enter-x xl:hidden">
-      <AppLogo :alwaysShowTitle="true" />
-    </span>
-
     <div class="container relative h-full py-2 mx-auto sm:px-10">
       <div class="flex h-full">
         <div class="hidden min-h-full pl-4 mr-4 xl:flex xl:flex-col xl:w-6/12">
-          <AppLogo class="-enter-x" />
           <div class="my-auto">
             <img
               :alt="title"
@@ -41,7 +35,6 @@
 </template>
 <script lang="ts" setup>
   import { computed } from 'vue';
-  import { AppLogo } from '/@/components/Application';
   import { AppLocalePicker, AppDarkModeToggle } from '/@/components/Application';
   import LoginForm from './LoginForm.vue';
   import ForgetPasswordForm from './ForgetPasswordForm.vue';
@@ -130,38 +123,6 @@
 
       @media (max-width: @screen-xl) {
         display: none;
-      }
-    }
-
-    .@{logo-prefix-cls} {
-      position: absolute;
-      top: 12px;
-      height: 30px;
-
-      &__title {
-        font-size: 16px;
-        color: #fff;
-      }
-
-      img {
-        width: 32px;
-      }
-    }
-
-    .container {
-      .@{logo-prefix-cls} {
-        display: flex;
-        width: 60%;
-        height: 80px;
-
-        &__title {
-          font-size: 24px;
-          color: #fff;
-        }
-
-        img {
-          width: 48px;
-        }
       }
     }
 
