@@ -21,15 +21,6 @@ export interface Props {
   rememberState: boolean;
 }
 
-export interface PreviewActions {
-  resume: () => void;
-  close: () => void;
-  prev: () => void;
-  next: () => void;
-  setScale: (scale: number) => void;
-  setRotate: (rotate: number) => void;
-}
-
 export interface ImageProps {
   alt?: string;
   fallback?: string;

@@ -55,7 +55,6 @@ export default {
     icon: '图标',
     tabs: '标签页操作',
     tabDetail: '标签详情页',
-    imgPreview: '图片预览',
     copy: '剪切板',
     msg: '消息提示',
     watermark: '水印',

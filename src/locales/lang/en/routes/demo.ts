@@ -56,7 +56,6 @@ export default {
     icon: 'Icon',
     tabs: 'Tabs',
     tabDetail: 'Tab Detail',
-    imgPreview: 'Picture Preview',
     copy: 'Clipboard',
     msg: 'Message prompt',
     watermark: 'Watermark',
