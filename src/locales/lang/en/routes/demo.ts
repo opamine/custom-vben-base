@@ -71,12 +71,6 @@ export default {
     menu2: 'Menu with parameters 2',
 
     ws: 'Websocket test',
-
-    breadcrumb: 'Breadcrumbs',
-    breadcrumbFlat: 'Flat Mode',
-    breadcrumbFlatDetail: 'Flat mode details',
-    breadcrumbChildren: 'Level mode',
-    breadcrumbChildrenDetail: 'Level mode detail',
   },
   form: {
     form: 'Form',

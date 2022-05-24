@@ -69,11 +69,6 @@ export default {
     menu1: 'Menu带参1',
     menu2: 'Menu带参2',
     ws: 'websocket测试',
-    breadcrumb: '面包屑导航',
-    breadcrumbFlat: '平级模式',
-    breadcrumbFlatDetail: '平级详情',
-    breadcrumbChildren: '层级模式',
-    breadcrumbChildrenDetail: '层级详情',
   },
   form: {
     form: 'Form',
