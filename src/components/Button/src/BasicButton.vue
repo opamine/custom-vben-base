@@ -9,6 +9,7 @@
 </template>
 
 <script lang="ts">
+  import { defineComponent } from 'vue'; // 🚩 未知问题（报 defineComponent 引入未使用）
   export default defineComponent({
     name: 'AButton',
     inheritAttrs: false,
