@@ -59,9 +59,6 @@ export default {
     msg: '消息提示',
     watermark: '水印',
     errorLog: '错误日志',
-    menu: 'Menu带参',
-    menu1: 'Menu带参1',
-    menu2: 'Menu带参2',
     ws: 'websocket测试',
   },
   form: {

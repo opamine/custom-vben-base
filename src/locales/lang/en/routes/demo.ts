@@ -60,9 +60,6 @@ export default {
     msg: 'Message prompt',
     watermark: 'Watermark',
     errorLog: 'Error Log',
-    menu: 'Menu with parameters',
-    menu1: 'Menu with parameters 1',
-    menu2: 'Menu with parameters 2',
 
     ws: 'Websocket test',
   },

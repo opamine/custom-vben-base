@@ -1,6 +1,5 @@
 import type { AppRouteModule } from '/@/router/types';
-
-import { getParentLayout, LAYOUT } from '/@/router/constant';
+import { LAYOUT } from '/@/router/constant';
 import { t } from '/@/hooks/web/useI18n';
 
 const feat: AppRouteModule = {
@@ -85,35 +84,6 @@ const feat: AppRouteModule = {
       meta: {
         title: t('routes.demo.feat.errorLog'),
       },
-    },
-    {
-      path: 'testParam/:id',
-      name: 'TestParam',
-      component: getParentLayout('TestParam'),
-      meta: {
-        title: t('routes.demo.feat.menu'),
-        ignoreKeepAlive: true,
-      },
-      children: [
-        {
-          path: 'sub1',
-          name: 'TestParam_1',
-          component: () => import('/@/views/demo/feat/menu-params/index.vue'),
-          meta: {
-            title: t('routes.demo.feat.menu1'),
-            ignoreKeepAlive: true,
-          },
-        },
-        {
-          path: 'sub2',
-          name: 'TestParam_2',
-          component: () => import('/@/views/demo/feat/menu-params/index.vue'),
-          meta: {
-            title: t('routes.demo.feat.menu2'),
-            ignoreKeepAlive: true,
-          },
-        },
-      ],
     },
   ],
 };
