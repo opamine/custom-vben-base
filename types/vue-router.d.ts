@@ -26,8 +26,6 @@ declare module 'vue-router' {
     hideBreadcrumb?: boolean;
     // Hide submenu
     hideChildrenInMenu?: boolean;
-    // Carrying parameters
-    carryParam?: boolean;
     // Used internally to mark single-level menus
     single?: boolean;
     // Currently active menu

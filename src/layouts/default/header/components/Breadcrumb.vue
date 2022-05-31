@@ -111,13 +111,10 @@
 
       function handleClick(route: RouteLocationMatched, paths: string[], e: Event) {
         e?.preventDefault();
-        const { children, redirect, meta } = route;
+        const { children, redirect, meta: _meta } = route;
 
         if (children?.length && !redirect) {
           e?.stopPropagation();
-          return;
-        }
-        if (meta?.carryParam) {
           return;
         }
 

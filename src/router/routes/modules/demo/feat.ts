@@ -87,38 +87,6 @@ const feat: AppRouteModule = {
       },
     },
     {
-      path: 'testTab/:id',
-      name: 'TestTab',
-      component: () => import('/@/views/demo/feat/tab-params/index.vue'),
-      meta: {
-        title: t('routes.demo.feat.tab'),
-        carryParam: true,
-        hidePathForChildren: true,
-      },
-      children: [
-        {
-          path: 'testTab/id1',
-          name: 'TestTab1',
-          component: () => import('/@/views/demo/feat/tab-params/index.vue'),
-          meta: {
-            title: t('routes.demo.feat.tab1'),
-            carryParam: true,
-            ignoreRoute: true,
-          },
-        },
-        {
-          path: 'testTab/id2',
-          name: 'TestTab2',
-          component: () => import('/@/views/demo/feat/tab-params/index.vue'),
-          meta: {
-            title: t('routes.demo.feat.tab2'),
-            carryParam: true,
-            ignoreRoute: true,
-          },
-        },
-      ],
-    },
-    {
       path: 'testParam/:id',
       name: 'TestParam',
       component: getParentLayout('TestParam'),
