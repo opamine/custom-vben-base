@@ -102,11 +102,7 @@
     </a-row>
   </PageWrapper>
 </template>
-<script lang="ts">
-  import { defineComponent } from 'vue';
+<script lang="ts" setup>
   import { PageWrapper } from '/@/components/Page';
-  import { Card, Row, Col } from 'ant-design-vue';
-  export default defineComponent({
-    components: { PageWrapper, ACard: Card, ARow: Row, ACol: Col },
-  });
+  import { Card as ACard, Row as ARow, Col as ACol } from 'ant-design-vue';
 </script>
