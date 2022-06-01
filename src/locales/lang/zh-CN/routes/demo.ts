@@ -5,7 +5,6 @@ export default {
   },
   comp: {
     comp: '组件',
-    basic: '基础组件',
     transition: '动画组件',
     countTo: '数字动画',
 
