@@ -32,7 +32,6 @@ export default {
     verifyRotate: 'Picture Restore',
 
     qrcode: 'QR code',
-    strength: 'Password strength',
     upload: 'Upload',
 
     time: 'Relative Time',

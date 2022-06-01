@@ -510,14 +510,6 @@ const comp: AppRouteModule = {
       },
     },
     {
-      path: 'strength-meter',
-      name: 'StrengthMeterDemo',
-      component: () => import('/@/views/demo/comp/strength-meter/index.vue'),
-      meta: {
-        title: t('routes.demo.comp.strength'),
-      },
-    },
-    {
       path: 'upload',
       name: 'UploadDemo',
       component: () => import('/@/views/demo/comp/upload/index.vue'),

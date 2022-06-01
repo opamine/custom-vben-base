@@ -10,7 +10,7 @@ export const formSchema: FormSchema[] = [
   {
     field: 'passwordNew',
     label: '新密码',
-    component: 'StrengthMeter',
+    component: 'InputPassword',
     componentProps: {
       placeholder: '新密码',
     },
@@ -25,7 +25,6 @@ export const formSchema: FormSchema[] = [
     field: 'confirmPassword',
     label: '确认密码',
     component: 'InputPassword',
-
     dynamicRules: ({ values }) => {
       return [
         {
