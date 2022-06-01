@@ -5,7 +5,8 @@
     class="upload-preview-modal"
     v-bind="$attrs"
     @register="register"
-    :showOkBtn="false"
+    @ok="closeModal"
+    :showCancelBtn="false"
   >
     <FileList :dataSource="fileListRef" :columns="columns" :actionColumn="actionColumn" />
   </BasicModal>
