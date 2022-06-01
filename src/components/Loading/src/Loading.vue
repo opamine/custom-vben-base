@@ -51,19 +51,19 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 200;
+    z-index: @page-loading-z-index;
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(240 242 245 / 40%);
+    background-color: rgb(0 0 0 / 10%);
 
     &.absolute {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 300;
+      z-index: @page-loading-z-index;
     }
   }
 

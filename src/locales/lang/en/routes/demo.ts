@@ -35,8 +35,6 @@ export default {
     strength: 'Password strength',
     upload: 'Upload',
 
-    loading: 'Loading',
-
     time: 'Relative Time',
     cropperImage: 'Cropper Image',
   },

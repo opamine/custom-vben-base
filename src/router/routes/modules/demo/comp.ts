@@ -525,14 +525,6 @@ const comp: AppRouteModule = {
         title: t('routes.demo.comp.upload'),
       },
     },
-    {
-      path: 'loading',
-      name: 'LoadingDemo',
-      component: () => import('/@/views/demo/comp/loading/index.vue'),
-      meta: {
-        title: t('routes.demo.comp.loading'),
-      },
-    },
   ],
 };
 
