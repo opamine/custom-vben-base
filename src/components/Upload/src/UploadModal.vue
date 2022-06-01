@@ -15,8 +15,8 @@
   >
     <template #centerFooter>
       <a-button
+        type="primary"
         @click="handleStartUpload"
-        color="success"
         :disabled="!getIsSelectFile"
         :loading="isUploadingRef"
       >
