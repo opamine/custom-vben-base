@@ -38,7 +38,6 @@ export default {
 
     time: '相对时间',
     cropperImage: '图片裁剪',
-    cardList: '卡片列表',
   },
   editor: {
     editor: '编辑器',
