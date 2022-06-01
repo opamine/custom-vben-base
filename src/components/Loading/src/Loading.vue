@@ -20,7 +20,6 @@
     props: {
       tip: {
         type: String as PropType<string>,
-        default: '',
       },
       size: {
         type: String as PropType<SizeEnum>,
@@ -42,6 +41,7 @@
       },
       theme: {
         type: String as PropType<'dark' | 'light'>,
+        default: 'light',
       },
     },
   });
