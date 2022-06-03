@@ -23,10 +23,6 @@ export default {
     drawer: 'Drawer',
     desc: 'Desc',
 
-    lazy: 'Lazy',
-    lazyBasic: 'Basic',
-    lazyTransition: 'Animation',
-
     upload: 'Upload',
 
     time: 'Relative Time',

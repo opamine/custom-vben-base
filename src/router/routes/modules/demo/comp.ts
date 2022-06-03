@@ -444,34 +444,6 @@ const comp: AppRouteModule = {
         title: t('routes.demo.comp.desc'),
       },
     },
-
-    {
-      path: 'lazy',
-      name: 'LazyDemo',
-      component: getParentLayout('LazyDemo'),
-      redirect: '/comp/lazy/basic',
-      meta: {
-        title: t('routes.demo.comp.lazy'),
-      },
-      children: [
-        {
-          path: 'basic',
-          name: 'BasicLazyDemo',
-          component: () => import('/@/views/demo/comp/lazy/index.vue'),
-          meta: {
-            title: t('routes.demo.comp.lazyBasic'),
-          },
-        },
-        {
-          path: 'transition',
-          name: 'BasicTransitionDemo',
-          component: () => import('/@/views/demo/comp/lazy/Transition.vue'),
-          meta: {
-            title: t('routes.demo.comp.lazyTransition'),
-          },
-        },
-      ],
-    },
     {
       path: 'upload',
       name: 'UploadDemo',

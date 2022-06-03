@@ -22,10 +22,6 @@ export default {
     drawer: '抽屉扩展',
     desc: '详情组件',
 
-    lazy: '懒加载组件',
-    lazyBasic: '基础示例',
-    lazyTransition: '动画效果',
-
     upload: '上传组件',
 
     time: '相对时间',
