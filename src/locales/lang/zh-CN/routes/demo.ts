@@ -30,7 +30,6 @@ export default {
     verifyDrag: '拖拽校验',
     verifyRotate: '图片还原',
 
-    qrcode: '二维码组件',
     upload: '上传组件',
 
     time: '相对时间',

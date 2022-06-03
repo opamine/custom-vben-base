@@ -31,7 +31,6 @@ export default {
     verifyDrag: 'Drag ',
     verifyRotate: 'Picture Restore',
 
-    qrcode: 'QR code',
     upload: 'Upload',
 
     time: 'Relative Time',
