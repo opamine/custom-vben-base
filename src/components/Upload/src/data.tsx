@@ -5,6 +5,7 @@ import {
   isImgTypeByName,
 } from './helper';
 import { Progress, Tag } from 'ant-design-vue';
+import { FileUnknownTwoTone } from '@ant-design/icons-vue';
 import TableAction from '/@/components/Table/src/components/TableAction.vue';
 import ThumbUrl from './ThumbUrl.vue';
 import { useI18n } from '/@/hooks/web/useI18n';
@@ -20,7 +21,7 @@ export function createTableColumns(): BasicColumn[] {
       width: 100,
       customRender: ({ record }) => {
         const { thumbUrl } = (record as FileItem) || {};
-        return thumbUrl && <ThumbUrl fileUrl={thumbUrl} />;
+        return (thumbUrl && <ThumbUrl fileUrl={thumbUrl} />) || <FileUnknownTwoTone />;
       },
     },
     {
@@ -48,6 +49,11 @@ export function createTableColumns(): BasicColumn[] {
       },
     },
     {
+      dataIndex: 'type',
+      title: '文件类型',
+      width: 100,
+    },
+    {
       dataIndex: 'size',
       title: t('component.upload.fileSize'),
       width: 100,
@@ -55,11 +61,6 @@ export function createTableColumns(): BasicColumn[] {
         return text && (text / 1024).toFixed(2) + 'KB';
       },
     },
-    // {
-    //   dataIndex: 'type',
-    //   title: '文件类型',
-    //   width: 100,
-    // },
     {
       dataIndex: 'status',
       title: t('component.upload.fileStatue'),
@@ -111,7 +112,7 @@ export function createPreviewColumns(): BasicColumn[] {
       width: 100,
       customRender: ({ record }) => {
         const { url } = (record as PreviewFileItem) || {};
-        return isImgTypeByName(url) && <ThumbUrl fileUrl={url} />;
+        return (isImgTypeByName(url) && <ThumbUrl fileUrl={url} />) || <FileUnknownTwoTone />;
       },
     },
     {

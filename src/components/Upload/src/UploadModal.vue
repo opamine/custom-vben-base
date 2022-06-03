@@ -46,11 +46,10 @@
   import { defineComponent, reactive, ref, toRefs, unref, computed, PropType } from 'vue';
   import { Upload, Alert } from 'ant-design-vue';
   import { BasicModal, useModalInner } from '/@/components/Modal';
-  //   import { BasicTable, useTable } from '/@/components/Table';
   // hooks
   import { useUploadType } from './useUpload';
   import { useMessage } from '/@/hooks/web/useMessage';
-  //   types
+  // types
   import { FileItem, UploadResultStatus } from './typing';
   import { basicProps } from './props';
   import { createTableColumns, createActionColumn } from './data';
@@ -59,6 +58,7 @@
   import { buildUUID } from '/@/utils/uuid';
   import { isFunction } from '/@/utils/is';
   import { warn } from '/@/utils/log';
+
   import FileList from './FileList.vue';
   import { useI18n } from '/@/hooks/web/useI18n';
 
@@ -227,7 +227,7 @@
             }),
           );
           isUploadingRef.value = false;
-          // 生产环境:抛出错误
+          // 生产环境: 抛出错误
           const errorList = data.filter((item: any) => !item.success);
           if (errorList.length > 0) throw errorList;
         } catch (e) {
@@ -283,7 +283,6 @@
         getStringAccept,
         getOkButtonProps,
         beforeUpload,
-        // registerTable,
         fileListRef,
         state,
         isUploadingRef,
