@@ -20,7 +20,6 @@ export default {
 
     modal: '弹窗扩展',
     drawer: '抽屉扩展',
-    desc: '详情组件',
 
     upload: '上传组件',
 

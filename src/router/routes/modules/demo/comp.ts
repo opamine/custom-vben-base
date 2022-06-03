@@ -437,14 +437,6 @@ const comp: AppRouteModule = {
       },
     },
     {
-      path: 'desc',
-      name: 'DescDemo',
-      component: () => import('/@/views/demo/comp/desc/index.vue'),
-      meta: {
-        title: t('routes.demo.comp.desc'),
-      },
-    },
-    {
       path: 'upload',
       name: 'UploadDemo',
       component: () => import('/@/views/demo/comp/upload/index.vue'),

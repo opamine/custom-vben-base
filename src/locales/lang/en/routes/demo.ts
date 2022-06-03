@@ -21,7 +21,6 @@ export default {
 
     modal: 'Modal',
     drawer: 'Drawer',
-    desc: 'Desc',
 
     upload: 'Upload',
 
