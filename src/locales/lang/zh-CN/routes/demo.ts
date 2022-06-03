@@ -26,10 +26,6 @@ export default {
     lazyBasic: '基础示例',
     lazyTransition: '动画效果',
 
-    verify: '验证组件',
-    verifyDrag: '拖拽校验',
-    verifyRotate: '图片还原',
-
     upload: '上传组件',
 
     time: '相对时间',

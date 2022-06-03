@@ -27,10 +27,6 @@ export default {
     lazyBasic: 'Basic',
     lazyTransition: 'Animation',
 
-    verify: 'Verify',
-    verifyDrag: 'Drag ',
-    verifyRotate: 'Picture Restore',
-
     upload: 'Upload',
 
     time: 'Relative Time',

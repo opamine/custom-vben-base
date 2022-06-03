@@ -114,11 +114,4 @@ export default {
     uploadWait: 'Please wait for the file upload to finish',
     reUploadFailed: 'Re-upload failed files',
   },
-  verify: {
-    error: 'verification failed！',
-    time: 'The verification is successful and it takes {time} seconds！',
-    redoTip: 'Click the picture to refresh',
-    dragText: 'Hold down the slider and drag',
-    successText: 'Verified',
-  },
 };
