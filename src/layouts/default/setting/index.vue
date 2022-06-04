@@ -1,5 +1,5 @@
 <template>
-  <div @click="openDrawer(true)">
+  <div @click="openDrawer">
     <Icon icon="ion:settings-outline" />
     <SettingDrawer @register="register" />
   </div>

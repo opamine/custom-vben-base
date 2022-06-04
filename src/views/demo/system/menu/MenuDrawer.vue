@@ -14,7 +14,7 @@
   import { defineComponent, ref, computed, unref } from 'vue';
   import { BasicForm, useForm } from '/@/components/Form/index';
   import { formSchema } from './menu.data';
-  import { BasicDrawer, useDrawerInner } from '/@/components/Drawer';
+  import { BasicDrawer, useDrawer } from '/@/components/Drawer';
 
   import { getMenuList } from '/@/api/demo/system';
 
@@ -32,7 +32,7 @@
         baseColProps: { lg: 12, md: 24 },
       });
 
-      const [registerDrawer, { setDrawerProps, closeDrawer }] = useDrawerInner(async (data) => {
+      const [registerDrawer, { setDrawerProps, closeDrawer }] = useDrawer(async (data) => {
         resetFields();
         setDrawerProps({ confirmLoading: false });
         isUpdate.value = !!data?.isUpdate;

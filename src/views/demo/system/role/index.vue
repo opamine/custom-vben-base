@@ -64,13 +64,13 @@
       });
 
       function handleCreate() {
-        openDrawer(true, {
+        openDrawer({
           isUpdate: false,
         });
       }
 
       function handleEdit(record: Recordable) {
-        openDrawer(true, {
+        openDrawer({
           record,
           isUpdate: true,
         });

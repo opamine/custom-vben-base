@@ -8,23 +8,14 @@ export interface DrawerInstance {
 }
 
 export interface ReturnMethods extends DrawerInstance {
-  openDrawer: <T = any>(visible?: boolean, data?: T, openOnSet?: boolean) => void;
+  openDrawer: <T = any>(data?: T, openOnSet?: boolean) => void;
   closeDrawer: () => void;
   getVisible?: ComputedRef<boolean>;
 }
 
 export type RegisterFn = (drawerInstance: DrawerInstance, uuid?: string) => void;
 
-export interface ReturnInnerMethods extends DrawerInstance {
-  closeDrawer: () => void;
-  changeLoading: (loading: boolean) => void;
-  changeOkLoading: (loading: boolean) => void;
-  getVisible?: ComputedRef<boolean>;
-}
-
 export type UseDrawerReturnType = [RegisterFn, ReturnMethods];
-
-export type UseDrawerInnerReturnType = [RegisterFn, ReturnInnerMethods];
 
 export interface DrawerFooterProps {
   showOkBtn: boolean;
@@ -69,6 +60,7 @@ export interface DrawerFooterProps {
   showFooter: boolean;
   footerHeight: string | number;
 }
+
 export interface DrawerProps extends DrawerFooterProps {
   loading?: boolean;
   visible?: boolean;
@@ -184,6 +176,7 @@ export interface DrawerProps extends DrawerFooterProps {
    */
   onClose?: (e?: Event) => void;
 }
+
 export interface DrawerActionType {
   scrollBottom: () => void;
   scrollTo: (to: number) => void;

@@ -27,9 +27,9 @@ export const footerProps = {
 
 export const basicProps = {
   title: { type: String, default: '' },
+  loading: { type: Boolean },
   loadingText: { type: String },
   visible: { type: Boolean },
-  loading: { type: Boolean },
   maskClosable: { type: Boolean, default: true },
   getContainer: {
     type: [Object, String] as PropType<any>,
