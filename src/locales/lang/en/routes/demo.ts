@@ -6,7 +6,6 @@ export default {
   comp: {
     comp: 'Component',
     transition: 'Animation',
-    countTo: 'Count To',
 
     scroll: 'Scroll',
     scrollBasic: 'Basic',

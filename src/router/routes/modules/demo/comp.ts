@@ -257,14 +257,6 @@ const comp: AppRouteModule = {
       },
     },
     {
-      path: 'countTo',
-      name: 'CountTo',
-      component: () => import('/@/views/demo/comp/count-to/index.vue'),
-      meta: {
-        title: t('routes.demo.comp.countTo'),
-      },
-    },
-    {
       path: 'tree',
       name: 'TreeDemo',
       redirect: '/comp/tree/basic',
