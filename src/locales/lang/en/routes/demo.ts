@@ -26,15 +26,6 @@ export default {
 
     cropperImage: 'Cropper Image',
   },
-  editor: {
-    editor: 'Editor',
-    jsonEditor: 'Json editor',
-    markdown: 'Markdown editor',
-
-    tinymce: 'Rich text',
-    tinymceBasic: 'Basic',
-    tinymceForm: 'embedded form',
-  },
   feat: {
     feat: 'Page Function',
     icon: 'Icon',
