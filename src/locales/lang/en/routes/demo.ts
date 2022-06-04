@@ -24,7 +24,6 @@ export default {
 
     upload: 'Upload',
 
-    time: 'Relative Time',
     cropperImage: 'Cropper Image',
   },
   editor: {

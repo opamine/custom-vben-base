@@ -256,15 +256,6 @@ const comp: AppRouteModule = {
         title: t('routes.demo.comp.cropperImage'),
       },
     },
-
-    {
-      path: 'timestamp',
-      name: 'TimeDemo',
-      component: () => import('/@/views/demo/comp/time/index.vue'),
-      meta: {
-        title: t('routes.demo.comp.time'),
-      },
-    },
     {
       path: 'countTo',
       name: 'CountTo',
