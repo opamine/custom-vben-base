@@ -1,12 +1,7 @@
 <template>
   <Drawer :class="prefixCls" @close="onClose" v-bind="getBindValues">
     <template #title v-if="!$slots.title">
-      <DrawerHeader
-        :title="getMergeProps.title"
-        :isDetail="isDetail"
-        :showDetailBack="showDetailBack"
-        @close="onClose"
-      >
+      <DrawerHeader :title="getMergeProps.title">
         <template #titleToolbar>
           <slot name="titleToolbar"></slot>
         </template>
@@ -65,7 +60,7 @@
       const propsRef = ref<Partial<Nullable<DrawerProps>>>(null);
 
       const { t } = useI18n();
-      const { prefixVar, prefixCls } = useDesign('basic-drawer');
+      const { prefixCls } = useDesign('basic-drawer');
 
       const drawerInstance: DrawerInstance = {
         setDrawerProps: setDrawerProps,
@@ -88,19 +83,6 @@
           visible: unref(visibleRef),
         };
         opt.title = undefined;
-        const { isDetail, width, wrapClassName, getContainer } = opt;
-        if (isDetail) {
-          if (!width) {
-            opt.width = '100%';
-          }
-          const detailCls = `${prefixCls}__detail`;
-          opt.class = wrapClassName ? `${wrapClassName} ${detailCls}` : detailCls;
-
-          if (!getContainer) {
-            // TODO type error?
-            opt.getContainer = `.${prefixVar}-layout-content` as any;
-          }
-        }
         return opt as DrawerProps;
       });
 

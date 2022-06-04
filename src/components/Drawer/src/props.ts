@@ -24,11 +24,10 @@ export const footerProps = {
     default: 60,
   },
 };
+
 export const basicProps = {
-  isDetail: { type: Boolean },
   title: { type: String, default: '' },
   loadingText: { type: String },
-  showDetailBack: { type: Boolean, default: true },
   visible: { type: Boolean },
   loading: { type: Boolean },
   maskClosable: { type: Boolean, default: true },

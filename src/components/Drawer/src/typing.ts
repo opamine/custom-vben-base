@@ -70,9 +70,7 @@ export interface DrawerFooterProps {
   footerHeight: string | number;
 }
 export interface DrawerProps extends DrawerFooterProps {
-  isDetail?: boolean;
   loading?: boolean;
-  showDetailBack?: boolean;
   visible?: boolean;
   /**
    * Built-in ScrollContainer component configuration
