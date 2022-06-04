@@ -7,7 +7,7 @@
         placeholder="选择动画"
         :style="{ width: '150px' }"
       />
-      <a-button type="primary" class="ml-4" @click="start"> start </a-button>
+      <a-button type="primary" class="ml-4" @click="start" :disabled="disabled"> start </a-button>
     </div>
     <component :is="`${value}Transition`">
       <div class="box" v-show="show"></div>
@@ -75,14 +75,17 @@
     },
     setup() {
       const value = ref('Fade');
-      const show = ref(true);
+      const show = ref(false);
+      const disabled = ref(false);
       function start() {
-        show.value = false;
+        show.value = true;
+        disabled.value = true;
         setTimeout(() => {
-          show.value = true;
+          show.value = false;
+          disabled.value = false;
         }, 300);
       }
-      return { options, value, start, show };
+      return { options, value, start, show, disabled };
     },
   });
 </script>
