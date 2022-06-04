@@ -57,7 +57,7 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0 0 0 / 10%);
+    background-color: rgb(240 242 245 / 40%);
 
     &.absolute {
       position: absolute;
