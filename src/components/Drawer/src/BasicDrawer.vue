@@ -11,11 +11,7 @@
       <slot name="title"></slot>
     </template>
 
-    <ScrollContainer
-      :style="getScrollContentStyle"
-      v-loading="getLoading"
-      :loading-tip="loadingText || t('common.loadingText')"
-    >
+    <ScrollContainer :style="getScrollContentStyle" v-loading="getLoading">
       <slot></slot>
     </ScrollContainer>
     <DrawerFooter v-bind="getProps" @close="onClose" @ok="handleOk" :height="getFooterHeight">
@@ -82,7 +78,8 @@
           ...unref(getMergeProps),
           visible: unref(visibleRef),
         };
-        opt.title = undefined;
+        opt.title = undefined; // 🚩 不知道这行代码的作用，先不动
+
         return opt as DrawerProps;
       });
 
@@ -178,7 +175,6 @@
   @header-height: 60px;
   @detail-header-height: 40px;
   @prefix-cls: ~'@{namespace}-basic-drawer';
-  @prefix-cls-detail: ~'@{namespace}-basic-drawer__detail';
 
   .@{prefix-cls} {
     .ant-drawer-wrapper-body {
@@ -204,35 +200,6 @@
       > .scrollbar > .scrollbar__bar.is-horizontal {
         display: none;
       }
-    }
-  }
-
-  .@{prefix-cls-detail} {
-    position: absolute;
-
-    .ant-drawer-header {
-      width: 100%;
-      height: @detail-header-height;
-      padding: 0;
-      border-top: 1px solid @border-color-base;
-      box-sizing: border-box;
-    }
-
-    .ant-drawer-title {
-      height: 100%;
-    }
-
-    .ant-drawer-close {
-      height: @detail-header-height;
-      line-height: @detail-header-height;
-    }
-
-    .scrollbar__wrap {
-      padding: 0 !important;
-    }
-
-    .ant-drawer-body {
-      height: calc(100% - @detail-header-height);
     }
   }
 </style>
