@@ -15,8 +15,15 @@
         打开 Drawer3 并传递数据 2
       </a-button>
     </Space>
-    <BasicDrawer title="Drawer Title" width="50%" @register="register1">Drawer1 Info.</BasicDrawer>
-    <BasicDrawer title="Drawer Title" width="50%" @register="register2">
+    <BasicDrawer
+      title="Drawer1 Title"
+      width="50%"
+      :show-footer="true"
+      ok-type="danger"
+      @register="register1"
+      >Drawer1 Content.</BasicDrawer
+    >
+    <BasicDrawer title="Drawer2 Title" width="50%" @register="register2">
       <a-button type="primary" @click="closeDrawer2"> 关闭 Drawer2 </a-button>
     </BasicDrawer>
     <BasicDrawer title="Drawer Title" width="50%" @register="register3">
@@ -65,7 +72,7 @@
           span: 24,
         },
       });
-      const [register3, { openDrawer: openDrawer4 }] = useDrawer((data) => {
+      const [register3, { openDrawer: openDrawer3 }] = useDrawer((data) => {
         setFieldsValue({
           field2: data.data,
           field1: data.info,
@@ -81,7 +88,7 @@
       };
 
       const openDrawer4WithData = (val: number) => {
-        openDrawer4({
+        openDrawer3({
           data: 'content' + val,
           info: 'Info' + val,
         });
