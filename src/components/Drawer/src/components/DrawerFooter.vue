@@ -45,7 +45,7 @@
         const heightStr = `${props.height}`;
         return {
           height: heightStr,
-          lineHeight: `${parseInt(heightStr) - 1}px`,
+          lineHeight: `${parseInt(heightStr) > 0 ? parseInt(heightStr) - 1 : 0}px`,
         };
       });
 
