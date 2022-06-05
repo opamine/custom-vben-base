@@ -72,7 +72,7 @@
 
       const getWidth = computed(() => `${props.width}`.replace(/px/, '') + 'px');
 
-      const getIconWidth = computed(() => parseInt(`${props.width}`.replace(/px/, '')) / 2 + 'px');
+      const getIconWidth = computed(() => parseInt(`${props.width}`.replace(/px/, '')) / 4 + 'px');
 
       const getStyle = computed((): CSSProperties => ({ width: unref(getWidth) }));
 
