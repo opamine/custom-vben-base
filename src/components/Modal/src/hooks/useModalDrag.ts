@@ -7,7 +7,7 @@ export interface UseModalDragMoveContext {
   visible: Ref<boolean>;
 }
 
-export function useModalDragMove(context: UseModalDragMoveContext) {
+export const useModalDragMove = (context: UseModalDragMoveContext) => {
   const getStyle = (dom: any, attr: any) => {
     return getComputedStyle(dom)[attr];
   };
@@ -52,7 +52,7 @@ export function useModalDragMove(context: UseModalDragMoveContext) {
         styT = +domTop.replace(/px/g, '');
       }
 
-      document.onmousemove = function (e) {
+      document.onmousemove = (e) => {
         // 通过事件委托，计算移动的距离
         let left = e.clientX - disX;
         let top = e.clientY - disY;
@@ -104,4 +104,4 @@ export function useModalDragMove(context: UseModalDragMoveContext) {
       handleDrag();
     }, 30);
   });
-}
+};
