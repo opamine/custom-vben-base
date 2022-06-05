@@ -15,12 +15,7 @@
         打开 Drawer3 并传递数据 2
       </a-button>
     </Space>
-    <BasicDrawer
-      title="Drawer1 Title"
-      width="50%"
-      :show-footer="true"
-      ok-type="danger"
-      @register="register1"
+    <BasicDrawer title="Drawer1 Title" width="50%" :show-footer="true" @register="register1"
       >Drawer1 Content.</BasicDrawer
     >
     <BasicDrawer title="Drawer2 Title" width="50%" @register="register2">
