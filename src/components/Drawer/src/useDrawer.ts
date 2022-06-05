@@ -20,30 +20,33 @@ const dataTransferRef = reactive<any>({});
 const visibleData = reactive<{ [key: number]: boolean }>({});
 
 /**
- * @description: Applicable to separate drawer and call outside
+ * @description: Applicable to separate drawerInstanceRef and call outside
  */
 export const useDrawer = (callbackFn?: Fn): UseDrawerReturnType => {
   if (!getCurrentInstance()) {
     error('useDrawer() can only be used inside setup() or functional components!');
   }
-  const drawer = ref<DrawerInstance | null>(null);
+  const drawerInstanceRef = ref<DrawerInstance | null>(null);
+  const currentInstance = getCurrentInstance();
   const loaded = ref<boolean | null>(false);
   const uid = ref<string>('');
 
   const register = (drawerInstance: DrawerInstance, uuid: string) => {
     isProdMode() &&
       tryOnUnmounted(() => {
-        drawer.value = null;
+        drawerInstanceRef.value = null;
         loaded.value = null;
         dataTransferRef[unref(uid)] = null;
       });
 
-    if (unref(loaded) && isProdMode() && drawerInstance === unref(drawer)) {
+    if (unref(loaded) && isProdMode() && drawerInstance === unref(drawerInstanceRef)) {
       return;
     }
     uid.value = uuid;
-    drawer.value = drawerInstance;
+    drawerInstanceRef.value = drawerInstance;
     loaded.value = true;
+
+    currentInstance?.emit('register', drawerInstance, uuid);
 
     drawerInstance.emitVisible = (visible: boolean, uid: number) => {
       visibleData[uid] = visible;
@@ -51,7 +54,7 @@ export const useDrawer = (callbackFn?: Fn): UseDrawerReturnType => {
   };
 
   const getInstance = () => {
-    const instance = unref(drawer);
+    const instance = unref(drawerInstanceRef);
     if (!instance) {
       error('useDrawer instance is undefined!');
     }
