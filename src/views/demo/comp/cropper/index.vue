@@ -1,8 +1,11 @@
 <template>
-  <PageWrapper title="图片裁剪示例" content="需要开启测试接口服务才能进行上传测试！">
+  <PageWrapper title="图片裁剪示例">
     <Row :gutter="12">
       <Col span="6">
-        <CollapseContainer title="头像裁剪">
+        <CollapseContainer
+          title="头像裁剪"
+          helpMessage="头像裁剪需要开启测试接口服务才能进行上传测试"
+        >
           <div style="text-align: center"
             ><CropperAvatar :uploadApi="uploadApi" :value="avatar"
           /></div>
