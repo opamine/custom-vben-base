@@ -1,6 +1,6 @@
 <template>
   <Drawer :class="prefixCls" @close="onClose" v-bind="getBindValues">
-    <template #title v-if="!$slots.title">
+    <template v-if="!$slots.title" #title>
       <DrawerHeader :title="getMergeProps.title">
         <template #titleToolbar>
           <slot name="titleToolbar"></slot>
@@ -39,15 +39,16 @@
     getCurrentInstance,
   } from 'vue';
   import { Drawer } from 'ant-design-vue';
-  import { useI18n } from '/@/hooks/web/useI18n';
   import { isFunction, isNumber } from '/@/utils/is';
   import { deepMerge } from '/@/utils';
-  import DrawerFooter from './components/DrawerFooter.vue';
-  import DrawerHeader from './components/DrawerHeader.vue';
-  import { ScrollContainer } from '/@/components/Container';
-  import { basicProps } from './props';
+  import { useI18n } from '/@/hooks/web/useI18n';
   import { useDesign } from '/@/hooks/web/useDesign';
   import { useAttrs } from '/@/hooks/core/useAttrs';
+  import { ScrollContainer } from '/@/components/Container';
+  import DrawerHeader from './components/DrawerHeader.vue';
+  import DrawerFooter from './components/DrawerFooter.vue';
+
+  import { basicProps } from './props';
 
   export default defineComponent({
     components: { Drawer, ScrollContainer, DrawerFooter, DrawerHeader },
