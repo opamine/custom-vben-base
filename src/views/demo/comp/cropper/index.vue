@@ -7,27 +7,17 @@
     <CollapseContainer title="矩形裁剪" class="my-4">
       <div class="container p-4">
         <div class="cropper-container mr-10">
-          <CropperImage ref="refCropper" :src="img" @cropend="handleCropend" style="width: 40vw" />
-        </div>
-        <img :src="cropperImg" class="croppered" v-if="cropperImg" alt="" />
-      </div>
-      <p v-if="cropperImg">裁剪后图片信息：{{ info }}</p>
-    </CollapseContainer>
-
-    <CollapseContainer title="圆形裁剪">
-      <div class="container p-4">
-        <div class="cropper-container mr-10">
           <CropperImage
             ref="refCropper"
             :src="img"
-            @cropend="handleCircleCropend"
+            @cropend="handleCropend"
             style="width: 40vw"
             circled
           />
         </div>
-        <img :src="circleImg" class="croppered" v-if="circleImg" />
+        <img :src="cropperImg" class="croppered" v-if="cropperImg" alt="" />
       </div>
-      <p v-if="circleImg">裁剪后图片信息：{{ circleInfo }}</p>
+      <p v-if="cropperImg"><span style="color: #409edf">裁剪后图片信息：</span>{{ info }}</p>
     </CollapseContainer>
   </PageWrapper>
 </template>
@@ -51,7 +41,6 @@
       const info = ref('');
       const cropperImg = ref('');
       const circleInfo = ref('');
-      const circleImg = ref('');
       const userStore = useUserStore();
       const avatar = ref(userStore.getUserInfo?.avatar || '');
       function handleCropend({ imgBase64, imgInfo }) {
@@ -59,19 +48,12 @@
         cropperImg.value = imgBase64;
       }
 
-      function handleCircleCropend({ imgBase64, imgInfo }) {
-        circleInfo.value = imgInfo;
-        circleImg.value = imgBase64;
-      }
-
       return {
         img,
         info,
         circleInfo,
         cropperImg,
-        circleImg,
         handleCropend,
-        handleCircleCropend,
         avatar,
         uploadApi: uploadApi as any,
       };

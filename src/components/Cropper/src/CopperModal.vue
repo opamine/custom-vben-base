@@ -1,20 +1,21 @@
 <template>
   <BasicModal
+    width="800px"
     v-bind="$attrs"
     @register="register"
     :title="t('component.cropper.modalTitle')"
-    width="800px"
     :canFullscreen="false"
     @ok="handleOk"
     :okText="t('component.cropper.okText')"
+    :okButtonProps="{ disabled: previewSource ? false : true }"
   >
     <div :class="prefixCls">
       <div :class="`${prefixCls}-left`">
         <div :class="`${prefixCls}-cropper`">
           <CropperImage
             v-if="src"
-            :src="src"
             height="300px"
+            :src="src"
             :circled="circled"
             @cropend="handleCropend"
             @ready="handleReady"
