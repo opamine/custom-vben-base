@@ -10,7 +10,6 @@ export default {
     scroll: 'Scroll',
     scrollBasic: 'Basic',
     scrollAction: 'Scroll Function',
-    virtualScroll: 'Virtual Scroll',
 
     tree: 'Tree',
 
