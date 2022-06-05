@@ -7,10 +7,6 @@ export default {
     comp: '组件',
     transition: '动画组件',
 
-    scroll: '滚动组件',
-    scrollBasic: '基础滚动',
-    scrollAction: '滚动函数',
-
     tree: 'Tree',
     treeBasic: '基础树',
     editTree: '可搜索/工具栏',

@@ -293,34 +293,6 @@ const comp: AppRouteModule = {
       ],
     },
     {
-      path: 'scroll',
-      name: 'ScrollDemo',
-      redirect: '/comp/scroll/basic',
-      component: getParentLayout('ScrollDemo'),
-      meta: {
-        title: t('routes.demo.comp.scroll'),
-      },
-      children: [
-        {
-          path: 'basic',
-          name: 'BasicScrollDemo',
-          component: () => import('/@/views/demo/comp/scroll/index.vue'),
-          meta: {
-            title: t('routes.demo.comp.scrollBasic'),
-          },
-        },
-        {
-          path: 'action',
-          name: 'ActionScrollDemo',
-          component: () => import('/@/views/demo/comp/scroll/Action.vue'),
-          meta: {
-            title: t('routes.demo.comp.scrollAction'),
-          },
-        },
-      ],
-    },
-
-    {
       path: 'modal',
       name: 'ModalDemo',
       component: () => import('/@/views/demo/comp/modal/index.vue'),

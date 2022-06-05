@@ -7,10 +7,6 @@ export default {
     comp: 'Component',
     transition: 'Animation',
 
-    scroll: 'Scroll',
-    scrollBasic: 'Basic',
-    scrollAction: 'Scroll Function',
-
     tree: 'Tree',
 
     treeBasic: 'Basic',
