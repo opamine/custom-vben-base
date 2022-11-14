@@ -72,13 +72,17 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           drop_console: VITE_DROP_CONSOLE,
         },
       },
-      // Turning off brotliSize display can slightly reduce packaging time
-      brotliSize: false,
       chunkSizeWarningLimit: 2000,
     },
     define: {
       // setting vue-i18-next
       // Suppress warning
+      // ----- 临时解决 vite-plugin-theme 插件不兼容 vite 3 的问题
+      //  Uncaught ReferenceError: __COLOR_PLUGIN_OUTPUT_FILE_NAME__ is not defined
+      __COLOR_PLUGIN_OUTPUT_FILE_NAME__: undefined,
+      __PROD__: true,
+      __COLOR_PLUGIN_OPTIONS__: {},
+      // --------------------------------------------------------------------------
       __INTLIFY_PROD_DEVTOOLS__: false,
       __APP_INFO__: JSON.stringify(__APP_INFO__),
     },
