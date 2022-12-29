@@ -7,7 +7,6 @@
     :canFullscreen="false"
     @ok="handleOk"
     :okText="t('component.cropper.okText')"
-    :okButtonProps="{ disabled: previewSource ? false : true }"
   >
     <div :class="prefixCls">
       <div :class="`${prefixCls}-left`">

@@ -72,7 +72,7 @@
 
       const getWidth = computed(() => `${props.width}`.replace(/px/, '') + 'px');
 
-      const getIconWidth = computed(() => parseInt(`${props.width}`.replace(/px/, '')) / 4 + 'px');
+      const getIconWidth = computed(() => parseInt(`${props.width}`.replace(/px/, '')) / 2 + 'px');
 
       const getStyle = computed((): CSSProperties => ({ width: unref(getWidth) }));
 
@@ -91,9 +91,9 @@
         },
       );
 
-      function handleUploadSuccess({ source }) {
+      function handleUploadSuccess({ source, data }) {
         sourceValue.value = source;
-        emit('change', source);
+        emit('change', { source, data });
         createMessage.success(t('component.cropper.uploadSuccess'));
       }
 
