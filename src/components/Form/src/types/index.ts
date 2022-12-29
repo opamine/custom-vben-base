@@ -107,9 +107,11 @@ export type ComponentType =
   | 'WeekPicker'
   | 'TimePicker'
   | 'Switch'
+  | 'StrengthMeter'
   | 'Upload'
   | 'IconPicker'
   | 'Render'
   | 'Slider'
   | 'Rate'
-  | 'Divider';
+  | 'Divider'
+  | 'ApiTransfer';
