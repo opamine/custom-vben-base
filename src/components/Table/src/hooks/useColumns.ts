@@ -1,7 +1,7 @@
 import type { BasicColumn, BasicTableProps, CellFormat, GetColumnsParams } from '../types/table';
 import type { PaginationProps } from '../types/pagination';
 import type { ComputedRef } from 'vue';
-import { computed, Ref, ref, toRaw, unref, watch } from 'vue';
+import { computed, Ref, ref, reactive, toRaw, unref, watch } from 'vue';
 import { renderEditCell } from '../components/editable';
 import { usePermission } from '/@/hooks/web/usePermission';
 import { useI18n } from '/@/hooks/web/useI18n';
@@ -11,19 +11,19 @@ import { formatToDate } from '/@/utils/dateUtil';
 import { ACTION_COLUMN_FLAG, DEFAULT_ALIGN, INDEX_COLUMN_FLAG, PAGE_SIZE } from '../const';
 
 function handleItem(item: BasicColumn, ellipsis: boolean) {
-  const { key: _key, dataIndex: _dataIndex, children } = item;
+  const { key, dataIndex, children } = item;
   item.align = item.align || DEFAULT_ALIGN;
   if (ellipsis) {
-    // if (!key) {
-    //   item.key = dataIndex;
-    // }
+    if (!key) {
+      item.key = dataIndex;
+    }
     if (!isBoolean(item.ellipsis)) {
       Object.assign(item, {
         ellipsis,
       });
     }
   }
-  if (children?.length) {
+  if (children && children.length) {
     handleChildren(children, !!ellipsis);
   }
 }
@@ -170,7 +170,7 @@ export function useColumns(
         if ((edit || editRow) && !isDefaultAction) {
           column.customRender = renderEditCell(column);
         }
-        return column;
+        return reactive(column);
       });
   });
 
