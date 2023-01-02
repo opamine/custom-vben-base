@@ -10,7 +10,7 @@ export const formSchema: FormSchema[] = [
   {
     field: 'passwordNew',
     label: '新密码',
-    component: 'InputPassword',
+    component: 'StrengthMeter',
     componentProps: {
       placeholder: '新密码',
     },
@@ -25,13 +25,14 @@ export const formSchema: FormSchema[] = [
     field: 'confirmPassword',
     label: '确认密码',
     component: 'InputPassword',
+
     dynamicRules: ({ values }) => {
       return [
         {
           required: true,
           validator: (_, value) => {
             if (!value) {
-              return Promise.reject('不能为空');
+              return Promise.reject('密码不能为空');
             }
             if (value !== values.passwordNew) {
               return Promise.reject('两次输入的密码不一致!');
