@@ -60,18 +60,25 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       // Load proxy configuration from .env
       proxy: createProxy(VITE_PROXY),
     },
+    esbuild: {
+      drop: VITE_DROP_CONSOLE ? ['console', 'debugger'] : [],
+    },
     build: {
-      minify: 'terser',
-      // target: 'es2015',
-      // cssTarget: 'chrome86',
+      target: 'es2015',
+      cssTarget: 'chrome86',
       outDir: OUTPUT_DIR,
-      terserOptions: {
-        compress: {
-          keep_infinity: true,
-          // Used to delete console in production environment
-          drop_console: VITE_DROP_CONSOLE,
-        },
-      },
+      // minify: 'terser',
+      /**
+       * 当 minify=“minify:'terser'” 解开注释
+       * Uncomment when minify="minify:'terser'"
+       */
+      // terserOptions: {
+      //   compress: {
+      //     keep_infinity: true,
+      //     // Used to delete console in production environment
+      //     drop_console: VITE_DROP_CONSOLE,
+      //   },
+      // },
       reportCompressedSize: false,
       chunkSizeWarningLimit: 2000,
     },
