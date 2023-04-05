@@ -7,7 +7,6 @@ import { configHtmlPlugin } from './html';
 import { configMockPlugin } from './mock';
 import { configCompressPlugin } from './compress';
 import { configVisualizerConfig } from './visualizer';
-import { configThemePlugin } from './theme';
 import { configSvgIconsPlugin } from './svgSprite';
 
 export async function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
@@ -37,9 +36,6 @@ export async function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   // rollup-plugin-visualizer
   vitePlugins.push(configVisualizerConfig());
-
-  // vite-plugin-theme
-  vitePlugins.push(configThemePlugin(isBuild));
 
   // The following plugins only work in the production environment
   if (isBuild) {

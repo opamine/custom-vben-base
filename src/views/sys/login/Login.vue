@@ -5,7 +5,7 @@
       :showText="false"
       v-if="!sessionTimeout && showLocale"
     />
-    <AppDarkModeToggle class="absolute top-3 right-7 enter-x" v-if="!sessionTimeout" />
+    <!-- <AppDarkModeToggle class="absolute top-3 right-7 enter-x" v-if="!sessionTimeout" /> -->
     <div class="container relative h-full py-2 mx-auto sm:px-10">
       <div class="flex h-full">
         <div class="hidden min-h-full pl-4 mr-4 xl:flex xl:flex-col xl:w-6/12">
@@ -34,7 +34,7 @@
 </template>
 <script lang="ts" setup>
   import { computed } from 'vue';
-  import { AppLocalePicker, AppDarkModeToggle } from '/@/components/Application';
+  import { AppLocalePicker } from '/@/components/Application';
   import LoginForm from './LoginForm.vue';
   import ForgetPasswordForm from './ForgetPasswordForm.vue';
   import RegisterForm from './RegisterForm.vue';
@@ -74,7 +74,7 @@
         background-color: #232a3b;
       }
 
-      .ant-btn:not(.ant-btn-link):not(.ant-btn-primary) {
+      .ant-btn:not(.ant-btn-link, .ant-btn-primary) {
         border: 1px solid #4a5569;
       }
 
