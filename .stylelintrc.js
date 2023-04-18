@@ -10,7 +10,6 @@ module.exports = {
     'no-descending-specificity': null, // 权重书写与样式书写顺序不做关联
     'function-no-unknown': null, // 不做函数校验
     'selector-class-pattern': null, // 即使关闭类名校验，请优先使用 'lowercase-lowercase' 格式
-    'string-quotes': 'single', // stylelint-config-standard 中配置的是 'double', prettier 中配置 'single', 手动以 prettier 为准
     'order/order': [
       [
         'dollar-variables',

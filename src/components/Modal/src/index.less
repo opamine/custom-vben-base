@@ -2,10 +2,7 @@
   overflow: hidden;
 
   .ant-modal {
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
+    inset: 0 !important;
     width: 100% !important;
     height: 100%;
 
@@ -111,18 +108,21 @@
   padding: 24px !important;
 }
 
+/* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-height: 600px) {
   .ant-modal {
     top: 60px;
   }
 }
 
+/* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-height: 540px) {
   .ant-modal {
     top: 30px;
   }
 }
 
+/* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-height: 480px) {
   .ant-modal {
     top: 10px;

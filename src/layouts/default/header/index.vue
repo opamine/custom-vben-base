@@ -84,6 +84,7 @@
   export default defineComponent({
     name: 'LayoutHeader',
     components: {
+      // eslint-disable-next-line vue/no-reserved-component-names
       Header: Layout.Header,
       AppLogo,
       LayoutTrigger,
@@ -197,5 +198,5 @@
   });
 </script>
 <style lang="less">
-  @import './index.less';
+  @import url('./index.less');
 </style>

@@ -24,6 +24,7 @@
   import { createSimpleRootMenuContext } from './useSimpleMenuContext';
   import mitt from '/@/utils/mitt';
   export default defineComponent({
+    // eslint-disable-next-line vue/no-reserved-component-names
     name: 'Menu',
     props: {
       theme: propTypes.oneOf(['light', 'dark']).def('light'),
@@ -154,5 +155,5 @@
   });
 </script>
 <style lang="less">
-  @import './menu.less';
+  @import url('./menu.less');
 </style>

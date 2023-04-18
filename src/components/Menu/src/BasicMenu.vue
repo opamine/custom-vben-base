@@ -37,6 +37,7 @@
   export default defineComponent({
     name: 'BasicMenu',
     components: {
+      // eslint-disable-next-line vue/no-reserved-component-names
       Menu,
       BasicSubMenuItem,
     },
@@ -160,5 +161,5 @@
   });
 </script>
 <style lang="less">
-  @import './index.less';
+  @import url('./index.less');
 </style>
