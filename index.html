@@ -8,20 +8,10 @@
       name="viewport"
       content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"
     />
-    <title><%= title %></title>
+    <title><%= VITE_GLOB_APP_TITLE %></title>
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
-    <script>
-      (() => {
-        var htmlRoot = document.getElementById('htmlRoot');
-        var theme = window.localStorage.getItem('__APP__DARK__MODE__');
-        if (htmlRoot && theme) {
-          htmlRoot.setAttribute('data-theme', theme);
-          theme = htmlRoot = null;
-        }
-      })();
-    </script>
     <div id="app">
       <style>
         html[data-theme='dark'] {

@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import { loadEnv } from 'vite';
 import { resolve } from 'path';
 import { generateModifyVars } from './build/generate/generateModifyVars';
-import { createProxy } from './build/vite/proxy';
 import { wrapperEnv } from './build/utils';
 import { createVitePlugins } from './build/vite/plugin';
 import { OUTPUT_DIR } from './build/constant';
@@ -27,7 +26,7 @@ export default async ({ command, mode }: ConfigEnv): Promise<UserConfig> => {
   // The boolean type read by loadEnv is a string. This function can be converted to boolean type
   const viteEnv = wrapperEnv(env);
 
-  const { VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv;
+  const { VITE_PUBLIC_PATH } = viteEnv;
 
   const isBuild = command === 'build';
 
@@ -53,10 +52,23 @@ export default async ({ command, mode }: ConfigEnv): Promise<UserConfig> => {
       ],
     },
     server: {
-      // Listening on all local IPs
-      host: true,
       // Load proxy configuration from .env
-      proxy: createProxy(VITE_PROXY),
+      proxy: {
+        '/basic-api': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+          ws: true,
+          rewrite: (path) => path.replace(new RegExp(`^/basic-api`), ''),
+          // only https
+          // secure: false
+        },
+        '/upload': {
+          target: 'http://localhost:3300/upload',
+          changeOrigin: true,
+          ws: true,
+          rewrite: (path) => path.replace(new RegExp(`^/upload`), ''),
+        },
+      },
     },
     esbuild: {
       drop: ['console', 'debugger'],
