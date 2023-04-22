@@ -21,15 +21,6 @@ export function generateAntColors(color: string, theme: GenerateTheme = 'default
   });
 }
 
-export function getThemeColors(color?: string) {
-  const tc = color || primaryColor;
-  const lightColors = generateAntColors(tc);
-  const primary = lightColors[5];
-  const modeColors = generateAntColors(primary, 'dark');
-
-  return [...lightColors, ...modeColors];
-}
-
 export function generateColors({
   color = primaryColor,
   mixLighten,

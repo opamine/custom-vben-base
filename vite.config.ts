@@ -6,7 +6,6 @@ import { resolve } from 'path';
 import { generateModifyVars } from './build/generate/generateModifyVars';
 import { wrapperEnv } from './build/utils';
 import { createVitePlugins } from './build/vite/plugin';
-import { OUTPUT_DIR } from './build/constant';
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
@@ -76,14 +75,12 @@ export default async ({ command, mode }: ConfigEnv): Promise<UserConfig> => {
     build: {
       target: 'es2015',
       cssTarget: 'chrome86',
-      outDir: OUTPUT_DIR,
       reportCompressedSize: false,
       chunkSizeWarningLimit: 2000,
     },
     define: {
       __APP_INFO__: JSON.stringify(__APP_INFO__),
     },
-
     css: {
       preprocessorOptions: {
         less: {
