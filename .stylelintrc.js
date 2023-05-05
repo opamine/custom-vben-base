@@ -10,6 +10,8 @@ module.exports = {
     'no-descending-specificity': null, // 权重书写与样式书写顺序不做关联
     'function-no-unknown': null, // 不做函数校验
     'selector-class-pattern': null, // 即使关闭类名校验，请优先使用 'lowercase-lowercase' 格式
+    'selector-not-notation': null,
+    'import-notation': null,
     'order/order': [
       [
         'dollar-variables',

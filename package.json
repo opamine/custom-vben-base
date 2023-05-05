@@ -131,6 +131,7 @@
     "stylelint-order": "^6.0.3",
     "terser": "^5.16.8",
     "typescript": "^5.0.3",
+    "unocss": "^0.51.8",
     "vite": "^4.2.1",
     "vite-plugin-mock": "^2.9.6",
     "vue-eslint-parser": "^9.1.1",

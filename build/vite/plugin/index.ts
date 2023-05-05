@@ -2,12 +2,12 @@ import { PluginOption } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import purgeIcons from 'vite-plugin-purge-icons';
-import windiCSS from 'vite-plugin-windicss';
 import { configHtmlPlugin } from './html';
 import { configMockPlugin } from './mock';
 import { configCompressPlugin } from './compress';
 import { configVisualizerConfig } from './visualizer';
 import { configSvgIconsPlugin } from './svgSprite';
+import { configUnocssPlugin } from './unocss';
 
 export async function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const { VITE_USE_MOCK, VITE_BUILD_COMPRESS } = viteEnv;
@@ -18,9 +18,6 @@ export async function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     // have to
     vueJsx(),
   ];
-
-  // vite-plugin-windicss
-  vitePlugins.push(windiCSS());
 
   // vite-plugin-html
   vitePlugins.push(configHtmlPlugin(viteEnv, isBuild));
@@ -42,6 +39,9 @@ export async function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     // rollup-plugin-gzip
     vitePlugins.push(configCompressPlugin(VITE_BUILD_COMPRESS));
   }
+
+  // unocss
+  vitePlugins.push(configUnocssPlugin());
 
   return vitePlugins;
 }
