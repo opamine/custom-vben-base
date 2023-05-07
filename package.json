@@ -111,6 +111,7 @@
     "cross-env": "^7.0.3",
     "cz-git": "^1.6.1",
     "czg": "^1.6.1",
+    "dotenv": "^16.0.3",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
